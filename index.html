@@ -1325,1289 +1325,1614 @@ button.pl-del{ position:static; display:inline-block; width:24px; height:24px; l
 
 <script id="__oca_saved_state__" type="application/json">null</script>
 <script id="checklist-data" type="application/json">{
- "groups": [
-  {
-   "id": "A",
-   "en": "Carton",
-   "vi": "Thùng Carton"
-  },
-  {
-   "id": "B",
-   "en": "Inner Packaging",
-   "vi": "Đóng Gói Bên Trong"
-  },
-  {
-   "id": "C",
-   "en": "Product",
-   "vi": "Sản Phẩm"
-  },
-  {
-   "id": "D",
-   "en": "Material",
-   "vi": "Vật Liệu"
-  },
-  {
-   "id": "E",
-   "en": "Construction",
-   "vi": "Kết Cấu"
-  },
-  {
-   "id": "F",
-   "en": "Hardware",
-   "vi": "Phụ Kiện"
-  },
-  {
-   "id": "G",
-   "en": "Manual",
-   "vi": "Hướng Dẫn"
-  },
-  {
-   "id": "H",
-   "en": "Knock-Down Product",
-   "vi": "Sản Phẩm Tháo Lắp"
+  "groups": [
+    {
+      "id": "A",
+      "en": "Carton",
+      "vi": "Thùng Carton"
+    },
+    {
+      "id": "B",
+      "en": "Inner Packaging",
+      "vi": "Đóng Gói Bên Trong"
+    },
+    {
+      "id": "C",
+      "en": "Product",
+      "vi": "Sản Phẩm"
+    },
+    {
+      "id": "D",
+      "en": "Material",
+      "vi": "Vật Liệu"
+    },
+    {
+      "id": "E",
+      "en": "Construction",
+      "vi": "Kết Cấu"
+    },
+    {
+      "id": "F",
+      "en": "Hardware",
+      "vi": "Phụ Kiện"
+    },
+    {
+      "id": "G",
+      "en": "Manual",
+      "vi": "Hướng Dẫn"
+    },
+    {
+      "id": "H",
+      "en": "Knock-Down Product",
+      "vi": "Sản Phẩm Tháo Lắp"
+    }
+  ],
+  "categories": {
+    "MATTRESS": {
+      "label": {
+        "en": "Mattress",
+        "vi": "Đệm"
+      },
+      "groups": {
+        "A": [
+          {
+            "en": "Carton Dimension",
+            "vi": "Kích thước thùng carton",
+            "code": "MATTRESS-A-01"
+          },
+          {
+            "en": "Carton Construction",
+            "vi": "Kết cấu thùng carton",
+            "code": "MATTRESS-A-02"
+          },
+          {
+            "en": "Carton Condition (torn/wet/crushed/pest-mold)",
+            "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
+            "code": "MATTRESS-A-03"
+          },
+          {
+            "en": "Carton Strength",
+            "vi": "Độ chắc chắn của thùng carton",
+            "code": "MATTRESS-A-04"
+          },
+          {
+            "en": "Carton Sealing",
+            "vi": "Tình trạng đóng kín thùng",
+            "code": "MATTRESS-A-05"
+          },
+          {
+            "en": "Carton Marking",
+            "vi": "Thông tin in trên thùng",
+            "code": "MATTRESS-A-06"
+          },
+          {
+            "en": "SKU / Model",
+            "vi": "Mã SKU / Model",
+            "code": "MATTRESS-A-07"
+          },
+          {
+            "en": "Quantity per Carton",
+            "vi": "Số lượng sản phẩm trong thùng",
+            "code": "MATTRESS-A-08"
+          },
+          {
+            "en": "Barcode",
+            "vi": "Mã vạch",
+            "code": "MATTRESS-A-09"
+          },
+          {
+            "en": "Shipping Mark",
+            "vi": "Thông tin shipping mark",
+            "code": "MATTRESS-A-10"
+          }
+        ],
+        "B": [
+          {
+            "code": "MATTRESS-B-01",
+            "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
+            "en": "Packaging specification vs. spec (tolerance +/-2cm)",
+            "srcCode": "QC-BB-01"
+          },
+          {
+            "code": "MATTRESS-B-02",
+            "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
+            "en": "Label: legal content + placement + barcode (barcode scan matches SKU (Decree 43/2017, 111/2021))",
+            "srcCode": "QC-BB-02"
+          },
+          {
+            "code": "MATTRESS-B-03",
+            "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
+            "en": "Included accessories (warranty card/desiccant/cutter) (per spec)",
+            "srcCode": "QC-BB-03"
+          },
+          {
+            "code": "MATTRESS-B-04",
+            "vi": "Ký hiệu vận chuyển + hạn mở roll-pack (icon/chữ đọc rõ)",
+            "en": "Shipping marks + roll-pack open-by date (icon/text legible)",
+            "srcCode": "QC-BB-04"
+          }
+        ],
+        "C": [
+          {
+            "code": "MATTRESS-C-01",
+            "vi": "Dài × Rộng đúng spec (dung sai ±1cm)",
+            "en": "Length x Width vs. spec (tolerance +/-1cm)",
+            "srcCode": "QC-KT-01"
+          },
+          {
+            "code": "MATTRESS-C-02",
+            "vi": "Độ dày nệm/topper đúng spec (dung sai ±0.8cm)",
+            "en": "Mattress/topper thickness vs. spec (tolerance +/-0.8cm)",
+            "srcCode": "QC-KT-02"
+          },
+          {
+            "code": "MATTRESS-C-03",
+            "vi": "Độ vuông (chênh 2 đường chéo / chiều dài) (tối đa 1.2%)",
+            "en": "Squareness (diagonal diff / length) (max 1.2%)",
+            "srcCode": "QC-KT-03"
+          },
+          {
+            "code": "MATTRESS-C-04",
+            "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
+            "en": "Weight vs. declared (tolerance +/-4%)",
+            "srcCode": "QC-KT-06"
+          },
+          {
+            "code": "MATTRESS-C-05",
+            "vi": "Độ phục hồi độ dày sau ép cuộn @72h (tối thiểu 93%)",
+            "en": "Thickness recovery after roll-pack @72h (min 93%)",
+            "srcCode": "QC-KT-08"
+          },
+          {
+            "code": "MATTRESS-C-06",
+            "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
+            "en": "Color vs. approved sample/spec (grey scale min 4 (ISO 105-A02))",
+            "srcCode": "QC-NQ-01"
+          },
+          {
+            "code": "MATTRESS-C-07",
+            "vi": "Đồng màu giữa các chi tiết (mặt/viền/border) (cấp xám tối thiểu 4)",
+            "en": "Color consistency between parts (face/border/piping) (grey scale min 4)",
+            "srcCode": "QC-NQ-02"
+          },
+          {
+            "code": "MATTRESS-C-08",
+            "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi)",
+            "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defects)",
+            "srcCode": "QC-NQ-03"
+          },
+          {
+            "code": "MATTRESS-C-09",
+            "vi": "Mùi sản phẩm (tối đa 2/5 điểm, sau mở bao 30')",
+            "en": "Product odor (max 2/5 score, 30min after unpacking)",
+            "srcCode": "QC-NQ-04"
+          },
+          {
+            "code": "MATTRESS-C-10",
+            "vi": "Độ phẳng bề mặt nệm (khe hở tối đa 8mm dưới thước 1m)",
+            "en": "Mattress surface flatness (max 8mm gap under 1m straightedge)",
+            "srcCode": "QC-NQ-05"
+          },
+          {
+            "code": "MATTRESS-C-11",
+            "vi": "Trang trí (thêu/in/tay nắm) đúng thiết kế & chắc chắn (kéo nhẹ 5N)",
+            "en": "Decoration (embroidery/print/handle) matches design & secure (5N pull test)",
+            "srcCode": "QC-NQ-06"
+          },
+          {
+            "code": "MATTRESS-C-12",
+            "vi": "Độ cứng cảm nhận (1-10) so với spec (lệch tối đa 1 bậc)",
+            "en": "Perceived firmness (1-10) vs. spec (max 1 step deviation)",
+            "srcCode": "QC-CG-01"
+          },
+          {
+            "code": "MATTRESS-C-13",
+            "vi": "ILD/IFD 25% so với spec (dung sai ±12% (ISO 2439/ASTM D3574))",
+            "en": "ILD/IFD 25% vs. spec (tolerance +/-12% (ISO 2439/ASTM D3574))",
+            "srcCode": "QC-CG-02",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "MATTRESS-C-14",
+            "vi": "Độ phục hồi vết ấn tay trên foam (tối đa 15 giây mất vết)",
+            "en": "Foam hand-press recovery (max 15s to disappear)",
+            "srcCode": "QC-CG-03"
+          },
+          {
+            "code": "MATTRESS-C-15",
+            "vi": "Edge support: độ lún mép khi ngồi 60s ~70kg (tối đa 50%)",
+            "en": "Edge support: edge sink sitting 60s ~70kg (max 50%)",
+            "srcCode": "QC-CG-04"
+          },
+          {
+            "code": "MATTRESS-C-16",
+            "vi": "Độ ồn lò xo / motor (không phát tiếng ồn bất thường)",
+            "en": "Spring/motor noise (no abnormal noise)",
+            "srcCode": "QC-CG-05"
+          },
+          {
+            "code": "MATTRESS-C-17",
+            "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng",
+            "en": "Claimed feature (cooling/massage/adjustable) works as spec",
+            "srcCode": "QC-CG-06"
+          },
+          {
+            "code": "MATTRESS-C-18",
+            "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải/màu lô) (QCVN 01:2017/BCT)",
+            "en": "[Safety] Formaldehyde content (3rd-party lab report, matching lot fabric/color) (QCVN 01:2017/BCT)",
+            "srcCode": "QC-AT-01"
+          },
+          {
+            "code": "MATTRESS-C-19",
+            "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
+            "en": "[Safety] Aromatic amines from azo dyes (max 30mg/kg (QCVN 01:2017/BCT))",
+            "srcCode": "QC-AT-02"
+          },
+          {
+            "code": "MATTRESS-C-20",
+            "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận, soát tay 100%)",
+            "en": "[Safety] Sharp objects / broken needles (zero tolerance, 100% hand check)",
+            "srcCode": "QC-AT-03"
+          },
+          {
+            "code": "MATTRESS-C-21",
+            "vi": "[An toàn] An toàn điện, sản phẩm có điện (tem hợp chuẩn hợp lệ + chạy 30' không nóng bất thường)",
+            "en": "[Safety] Electrical safety for powered products (valid compliance mark + 30min run, no abnormal heat)",
+            "srcCode": "QC-AT-04"
+          }
+        ],
+        "D": [
+          {
+            "code": "MATTRESS-D-01",
+            "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
+            "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))",
+            "srcCode": "QC-CL-01",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "MATTRESS-D-02",
+            "vi": "Lực kéo đứt vải dệt thoi (tối thiểu 250N (ISO 13934-1))",
+            "en": "Woven fabric breaking strength (min 250N (ISO 13934-1))",
+            "srcCode": "QC-CL-02",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "MATTRESS-D-03",
+            "vi": "Độ bục vải dệt kim (tối thiểu 250kPa (ISO 13938-1))",
+            "en": "Knit fabric bursting strength (min 250kPa (ISO 13938-1))",
+            "srcCode": "QC-CL-03",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "MATTRESS-D-04",
+            "vi": "Lực xé rách vải (tối thiểu 20N (ISO 13937-2))",
+            "en": "Fabric tearing strength (min 20N (ISO 13937-2))",
+            "srcCode": "QC-CL-04",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "MATTRESS-D-05",
+            "vi": "Độ bền màu ma sát khô/ướt (cấp tối thiểu 4 (ISO 105-X12))",
+            "en": "Colorfastness to rubbing dry/wet (min grade 4 (ISO 105-X12))",
+            "srcCode": "QC-CL-07",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "MATTRESS-D-06",
+            "vi": "Tỷ trọng foam/latex (density) (dung sai ±5% (ISO 845))",
+            "en": "Foam/latex density (tolerance +/-5% (ISO 845))",
+            "srcCode": "QC-CL-10",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "MATTRESS-D-07",
+            "vi": "Biến dạng dư foam, compression set 50% (tối đa 8% (ASTM D3574))",
+            "en": "Foam compression set 50% (max 8% (ASTM D3574))",
+            "srcCode": "QC-CL-11",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "MATTRESS-D-08",
+            "vi": "Lò xo: số con / gauge / chiều cao / zone (ghi nhận số liệu, đối chiếu spec)",
+            "en": "Springs: count / gauge / height / zone (record value vs. spec)",
+            "srcCode": "QC-CL-12",
+            "stages": [
+              "DEV"
+            ]
+          }
+        ],
+        "E": [
+          {
+            "code": "MATTRESS-E-01",
+            "vi": "Mật độ mũi may (10-12 mũi/3cm)",
+            "en": "Stitch density (10-12 stitches/3cm)",
+            "srcCode": "QC-MAY-01"
+          },
+          {
+            "code": "MATTRESS-E-02",
+            "vi": "Đường may: bỏ mũi / sụp mũi / le mí (không lỗi)",
+            "en": "Seam defects: skipped/sunk stitch, puckering (no defect)",
+            "srcCode": "QC-MAY-02"
+          },
+          {
+            "code": "MATTRESS-E-03",
+            "vi": "Lại mũi đầu/cuối, chỉ thừa tối đa 5mm",
+            "en": "Backstitch at start/end, thread tail max 5mm",
+            "srcCode": "QC-MAY-03"
+          },
+          {
+            "code": "MATTRESS-E-04",
+            "vi": "Viền / bo góc / tape edge phẳng đều (không nhăn vặn)",
+            "en": "Binding/corner/tape edge flat and even (no puckering)",
+            "srcCode": "QC-MAY-04"
+          },
+          {
+            "code": "MATTRESS-E-05",
+            "vi": "Dây kéo chạy mượt 20 chu kỳ, khoá giữ, răng đủ, đầu không sắc",
+            "en": "Zipper runs smooth 20 cycles, locks, teeth intact, no sharp pull-end",
+            "srcCode": "QC-MAY-05"
+          },
+          {
+            "code": "MATTRESS-E-06",
+            "vi": "Lực kéo đứt đường may, seam strength (ghi nhận số liệu (ISO 13935-2))",
+            "en": "Seam strength (record value (ISO 13935-2))",
+            "srcCode": "QC-MAY-06",
+            "stages": [
+              "DEV"
+            ]
+          }
+        ],
+        "G": [
+          {
+            "code": "MATTRESS-G-01",
+            "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu",
+            "en": "QCVN test report valid (<=12mo), matching fabric/color",
+            "srcCode": "QC-HS-01"
+          },
+          {
+            "code": "MATTRESS-G-02",
+            "vi": "Báo cáo thành phần sợi khớp nhãn (NĐ 43/2017)",
+            "en": "Fiber-content report matches label (Decree 43/2017)",
+            "srcCode": "QC-HS-02",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "MATTRESS-G-03",
+            "vi": "COA theo từng lô + số liệu trong dung sai",
+            "en": "Lot COA + figures within tolerance",
+            "srcCode": "QC-HS-03",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "MATTRESS-G-04",
+            "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) còn hạn",
+            "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) valid",
+            "srcCode": "QC-HS-04",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "MATTRESS-G-05",
+            "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (check trước QC-3)",
+            "en": "Final spec signed + golden sample sealed (checked before QC-3)",
+            "srcCode": "QC-HS-05",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          }
+        ],
+        "F": [
+          {
+            "en": "Base / frame hardware (if any) secure",
+            "vi": "Phụ kiện khung đế (nếu có) chắc chắn",
+            "code": "MATTRESS-F-01"
+          },
+          {
+            "en": "Remote control / control box works (if applicable)",
+            "vi": "Remote / hộp điều khiển hoạt động đúng (nếu có)",
+            "code": "MATTRESS-F-02"
+          }
+        ]
+      }
+    },
+    "BEDDING": {
+      "label": {
+        "en": "Bedding (Sheets/Duvet)",
+        "vi": "Chăn ga"
+      },
+      "groups": {
+        "A": [
+          {
+            "en": "Carton Dimension",
+            "vi": "Kích thước thùng carton",
+            "code": "BEDDING-A-01"
+          },
+          {
+            "en": "Carton Construction",
+            "vi": "Kết cấu thùng carton",
+            "code": "BEDDING-A-02"
+          },
+          {
+            "en": "Carton Condition (torn/wet/crushed/pest-mold)",
+            "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
+            "code": "BEDDING-A-03"
+          },
+          {
+            "en": "Carton Strength",
+            "vi": "Độ chắc chắn của thùng carton",
+            "code": "BEDDING-A-04"
+          },
+          {
+            "en": "Carton Sealing",
+            "vi": "Tình trạng đóng kín thùng",
+            "code": "BEDDING-A-05"
+          },
+          {
+            "en": "Carton Marking",
+            "vi": "Thông tin in trên thùng",
+            "code": "BEDDING-A-06"
+          },
+          {
+            "en": "SKU / Model",
+            "vi": "Mã SKU / Model",
+            "code": "BEDDING-A-07"
+          },
+          {
+            "en": "Quantity per Carton",
+            "vi": "Số lượng sản phẩm trong thùng",
+            "code": "BEDDING-A-08"
+          },
+          {
+            "en": "Barcode",
+            "vi": "Mã vạch",
+            "code": "BEDDING-A-09"
+          },
+          {
+            "en": "Shipping Mark",
+            "vi": "Thông tin shipping mark",
+            "code": "BEDDING-A-10"
+          }
+        ],
+        "B": [
+          {
+            "code": "BEDDING-B-01",
+            "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
+            "en": "Packaging specification vs. spec (tolerance +/-2cm)",
+            "srcCode": "QC-BB-01"
+          },
+          {
+            "code": "BEDDING-B-02",
+            "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
+            "en": "Label: legal content + placement + barcode (barcode scan matches SKU (Decree 43/2017, 111/2021))",
+            "srcCode": "QC-BB-02"
+          },
+          {
+            "code": "BEDDING-B-03",
+            "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
+            "en": "Included accessories (warranty card/desiccant/cutter) (per spec)",
+            "srcCode": "QC-BB-03"
+          }
+        ],
+        "C": [
+          {
+            "code": "BEDDING-C-01",
+            "vi": "Độ vuông (chênh 2 đường chéo / chiều dài) (tối đa 1.2%)",
+            "en": "Squareness (diagonal diff / length) (max 1.2%)",
+            "srcCode": "QC-KT-03"
+          },
+          {
+            "code": "BEDDING-C-02",
+            "vi": "Kích thước chăn ga + độ ôm ga chun (dung sai ±2%)",
+            "en": "Bedding dimension + fitted-sheet fit (tolerance +/-2%)",
+            "srcCode": "QC-KT-04"
+          },
+          {
+            "code": "BEDDING-C-03",
+            "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
+            "en": "Weight vs. declared (tolerance +/-4%)",
+            "srcCode": "QC-KT-06"
+          },
+          {
+            "code": "BEDDING-C-04",
+            "vi": "Cân đối hoạ tiết / canh sọc (tối đa lệch tâm 1%)",
+            "en": "Pattern/stripe alignment (max offset 1%)",
+            "srcCode": "QC-KT-07"
+          },
+          {
+            "code": "BEDDING-C-05",
+            "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
+            "en": "Color vs. approved sample/spec (grey scale min 4 (ISO 105-A02))",
+            "srcCode": "QC-NQ-01"
+          },
+          {
+            "code": "BEDDING-C-06",
+            "vi": "Đồng màu giữa các chi tiết (mặt/viền/border) (cấp xám tối thiểu 4)",
+            "en": "Color consistency between parts (face/border/piping) (grey scale min 4)",
+            "srcCode": "QC-NQ-02"
+          },
+          {
+            "code": "BEDDING-C-07",
+            "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi)",
+            "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defects)",
+            "srcCode": "QC-NQ-03"
+          },
+          {
+            "code": "BEDDING-C-08",
+            "vi": "Mùi sản phẩm (tối đa 2/5 điểm, sau mở bao 30')",
+            "en": "Product odor (max 2/5 score, 30min after unpacking)",
+            "srcCode": "QC-NQ-04"
+          },
+          {
+            "code": "BEDDING-C-09",
+            "vi": "Trang trí (thêu/in/tay nắm) đúng thiết kế & chắc chắn (kéo nhẹ 5N)",
+            "en": "Decoration (embroidery/print/handle) matches design & secure (5N pull test)",
+            "srcCode": "QC-NQ-06"
+          },
+          {
+            "code": "BEDDING-C-10",
+            "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng",
+            "en": "Claimed feature (cooling/massage/adjustable) works as spec",
+            "srcCode": "QC-CG-06"
+          },
+          {
+            "code": "BEDDING-C-11",
+            "vi": "Hand-feel so với golden sample / mẫu duyệt (tối thiểu 4/5 điểm)",
+            "en": "Hand-feel vs. golden/approved sample (min 4/5 score)",
+            "srcCode": "QC-CG-07"
+          },
+          {
+            "code": "BEDDING-C-12",
+            "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải/màu lô) (QCVN 01:2017/BCT)",
+            "en": "[Safety] Formaldehyde content (3rd-party lab report, matching lot fabric/color) (QCVN 01:2017/BCT)",
+            "srcCode": "QC-AT-01"
+          },
+          {
+            "code": "BEDDING-C-13",
+            "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
+            "en": "[Safety] Aromatic amines from azo dyes (max 30mg/kg (QCVN 01:2017/BCT))",
+            "srcCode": "QC-AT-02"
+          },
+          {
+            "code": "BEDDING-C-14",
+            "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận, soát tay 100%)",
+            "en": "[Safety] Sharp objects / broken needles (zero tolerance, 100% hand check)",
+            "srcCode": "QC-AT-03"
+          }
+        ],
+        "D": [
+          {
+            "code": "BEDDING-D-01",
+            "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
+            "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))",
+            "srcCode": "QC-CL-01",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-D-02",
+            "vi": "Lực kéo đứt vải dệt thoi (tối thiểu 250N (ISO 13934-1))",
+            "en": "Woven fabric breaking strength (min 250N (ISO 13934-1))",
+            "srcCode": "QC-CL-02",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-D-03",
+            "vi": "Độ bục vải dệt kim (tối thiểu 250kPa (ISO 13938-1))",
+            "en": "Knit fabric bursting strength (min 250kPa (ISO 13938-1))",
+            "srcCode": "QC-CL-03",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-D-04",
+            "vi": "Lực xé rách vải (tối thiểu 20N (ISO 13937-2))",
+            "en": "Fabric tearing strength (min 20N (ISO 13937-2))",
+            "srcCode": "QC-CL-04",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-D-05",
+            "vi": "Độ co rút sau giặt (ISO 6330, 4N 40°C, ghi nhận số liệu)",
+            "en": "Shrinkage after wash (ISO 6330, 4N 40C, record value)",
+            "srcCode": "QC-CL-05",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-D-06",
+            "vi": "Độ bền màu giặt (cấp tối thiểu 4 (ISO 105-C06))",
+            "en": "Colorfastness to washing (min grade 4 (ISO 105-C06))",
+            "srcCode": "QC-CL-06",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-D-07",
+            "vi": "Độ bền màu ma sát khô/ướt (cấp tối thiểu 4 (ISO 105-X12))",
+            "en": "Colorfastness to rubbing dry/wet (min grade 4 (ISO 105-X12))",
+            "srcCode": "QC-CL-07",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-D-08",
+            "vi": "Độ bền màu mồ hôi (cấp tối thiểu 3.5 (ISO 105-E04))",
+            "en": "Colorfastness to perspiration (min grade 3.5 (ISO 105-E04))",
+            "srcCode": "QC-CL-08",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-D-09",
+            "vi": "Độ xù lông @2000 vòng (cấp tối thiểu 3.5 (ISO 12945-2))",
+            "en": "Pilling resistance @2000 cycles (min grade 3.5 (ISO 12945-2))",
+            "srcCode": "QC-CL-09",
+            "stages": [
+              "DEV"
+            ]
+          }
+        ],
+        "E": [
+          {
+            "code": "BEDDING-E-01",
+            "vi": "Mật độ mũi may (10-12 mũi/3cm)",
+            "en": "Stitch density (10-12 stitches/3cm)",
+            "srcCode": "QC-MAY-01"
+          },
+          {
+            "code": "BEDDING-E-02",
+            "vi": "Đường may: bỏ mũi / sụp mũi / le mí (không lỗi)",
+            "en": "Seam defects: skipped/sunk stitch, puckering (no defect)",
+            "srcCode": "QC-MAY-02"
+          },
+          {
+            "code": "BEDDING-E-03",
+            "vi": "Lại mũi đầu/cuối, chỉ thừa tối đa 5mm",
+            "en": "Backstitch at start/end, thread tail max 5mm",
+            "srcCode": "QC-MAY-03"
+          },
+          {
+            "code": "BEDDING-E-04",
+            "vi": "Viền / bo góc / tape edge phẳng đều (không nhăn vặn)",
+            "en": "Binding/corner/tape edge flat and even (no puckering)",
+            "srcCode": "QC-MAY-04"
+          },
+          {
+            "code": "BEDDING-E-05",
+            "vi": "Dây kéo chạy mượt 20 chu kỳ, khoá giữ, răng đủ, đầu không sắc",
+            "en": "Zipper runs smooth 20 cycles, locks, teeth intact, no sharp pull-end",
+            "srcCode": "QC-MAY-05"
+          },
+          {
+            "code": "BEDDING-E-06",
+            "vi": "Lực kéo đứt đường may, seam strength (ghi nhận số liệu (ISO 13935-2))",
+            "en": "Seam strength (record value (ISO 13935-2))",
+            "srcCode": "QC-MAY-06",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "BEDDING-E-07",
+            "vi": "Độ hở mép đường may @60N, seam slippage (tối đa 6mm (ISO 13936-1))",
+            "en": "Seam slippage @60N (max 6mm (ISO 13936-1))",
+            "srcCode": "QC-MAY-07",
+            "stages": [
+              "DEV"
+            ]
+          }
+        ],
+        "G": [
+          {
+            "code": "BEDDING-G-01",
+            "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu",
+            "en": "QCVN test report valid (<=12mo), matching fabric/color",
+            "srcCode": "QC-HS-01"
+          },
+          {
+            "code": "BEDDING-G-02",
+            "vi": "Báo cáo thành phần sợi khớp nhãn (NĐ 43/2017)",
+            "en": "Fiber-content report matches label (Decree 43/2017)",
+            "srcCode": "QC-HS-02",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "BEDDING-G-03",
+            "vi": "COA theo từng lô + số liệu trong dung sai",
+            "en": "Lot COA + figures within tolerance",
+            "srcCode": "QC-HS-03",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "BEDDING-G-04",
+            "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) còn hạn",
+            "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) valid",
+            "srcCode": "QC-HS-04",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "BEDDING-G-05",
+            "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (check trước QC-3)",
+            "en": "Final spec signed + golden sample sealed (checked before QC-3)",
+            "srcCode": "QC-HS-05",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          }
+        ]
+      }
+    },
+    "PILLOW": {
+      "label": {
+        "en": "Pillow",
+        "vi": "Gối"
+      },
+      "groups": {
+        "A": [
+          {
+            "en": "Carton Dimension",
+            "vi": "Kích thước thùng carton",
+            "code": "PILLOW-A-01"
+          },
+          {
+            "en": "Carton Construction",
+            "vi": "Kết cấu thùng carton",
+            "code": "PILLOW-A-02"
+          },
+          {
+            "en": "Carton Condition (torn/wet/crushed/pest-mold)",
+            "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
+            "code": "PILLOW-A-03"
+          },
+          {
+            "en": "Carton Strength",
+            "vi": "Độ chắc chắn của thùng carton",
+            "code": "PILLOW-A-04"
+          },
+          {
+            "en": "Carton Sealing",
+            "vi": "Tình trạng đóng kín thùng",
+            "code": "PILLOW-A-05"
+          },
+          {
+            "en": "Carton Marking",
+            "vi": "Thông tin in trên thùng",
+            "code": "PILLOW-A-06"
+          },
+          {
+            "en": "SKU / Model",
+            "vi": "Mã SKU / Model",
+            "code": "PILLOW-A-07"
+          },
+          {
+            "en": "Quantity per Carton",
+            "vi": "Số lượng sản phẩm trong thùng",
+            "code": "PILLOW-A-08"
+          },
+          {
+            "en": "Barcode",
+            "vi": "Mã vạch",
+            "code": "PILLOW-A-09"
+          },
+          {
+            "en": "Shipping Mark",
+            "vi": "Thông tin shipping mark",
+            "code": "PILLOW-A-10"
+          }
+        ],
+        "B": [
+          {
+            "code": "PILLOW-B-01",
+            "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
+            "en": "Packaging specification vs. spec (tolerance +/-2cm)",
+            "srcCode": "QC-BB-01"
+          },
+          {
+            "code": "PILLOW-B-02",
+            "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
+            "en": "Label: legal content + placement + barcode (barcode scan matches SKU (Decree 43/2017, 111/2021))",
+            "srcCode": "QC-BB-02"
+          },
+          {
+            "code": "PILLOW-B-03",
+            "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
+            "en": "Included accessories (warranty card/desiccant/cutter) (per spec)",
+            "srcCode": "QC-BB-03"
+          }
+        ],
+        "C": [
+          {
+            "code": "PILLOW-C-01",
+            "vi": "Kích thước gối/phụ kiện đúng spec (dung sai ±1.5cm)",
+            "en": "Pillow/accessory dimension vs. spec (tolerance +/-1.5cm)",
+            "srcCode": "QC-KT-05"
+          },
+          {
+            "code": "PILLOW-C-02",
+            "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
+            "en": "Weight vs. declared (tolerance +/-4%)",
+            "srcCode": "QC-KT-06"
+          },
+          {
+            "code": "PILLOW-C-03",
+            "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
+            "en": "Color vs. approved sample/spec (grey scale min 4 (ISO 105-A02))",
+            "srcCode": "QC-NQ-01"
+          },
+          {
+            "code": "PILLOW-C-04",
+            "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi)",
+            "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defects)",
+            "srcCode": "QC-NQ-03"
+          },
+          {
+            "code": "PILLOW-C-05",
+            "vi": "Mùi sản phẩm (tối đa 2/5 điểm, sau mở bao 30')",
+            "en": "Product odor (max 2/5 score, 30min after unpacking)",
+            "srcCode": "QC-NQ-04"
+          },
+          {
+            "code": "PILLOW-C-06",
+            "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng",
+            "en": "Claimed feature (cooling/massage/adjustable) works as spec",
+            "srcCode": "QC-CG-06"
+          },
+          {
+            "code": "PILLOW-C-07",
+            "vi": "Hand-feel so với golden sample / mẫu duyệt (tối thiểu 4/5 điểm)",
+            "en": "Hand-feel vs. golden/approved sample (min 4/5 score)",
+            "srcCode": "QC-CG-07"
+          },
+          {
+            "code": "PILLOW-C-08",
+            "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải/màu lô) (QCVN 01:2017/BCT)",
+            "en": "[Safety] Formaldehyde content (3rd-party lab report, matching lot fabric/color) (QCVN 01:2017/BCT)",
+            "srcCode": "QC-AT-01"
+          },
+          {
+            "code": "PILLOW-C-09",
+            "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
+            "en": "[Safety] Aromatic amines from azo dyes (max 30mg/kg (QCVN 01:2017/BCT))",
+            "srcCode": "QC-AT-02"
+          },
+          {
+            "code": "PILLOW-C-10",
+            "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận, soát tay 100%)",
+            "en": "[Safety] Sharp objects / broken needles (zero tolerance, 100% hand check)",
+            "srcCode": "QC-AT-03"
+          }
+        ],
+        "D": [
+          {
+            "code": "PILLOW-D-01",
+            "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
+            "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))",
+            "srcCode": "QC-CL-01",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "PILLOW-D-02",
+            "vi": "Độ bục vải dệt kim (tối thiểu 250kPa (ISO 13938-1))",
+            "en": "Knit fabric bursting strength (min 250kPa (ISO 13938-1))",
+            "srcCode": "QC-CL-03",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "PILLOW-D-03",
+            "vi": "Độ co rút sau giặt (ISO 6330, 4N 40°C, ghi nhận số liệu)",
+            "en": "Shrinkage after wash (ISO 6330, 4N 40C, record value)",
+            "srcCode": "QC-CL-05",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "PILLOW-D-04",
+            "vi": "Độ bền màu giặt (cấp tối thiểu 4 (ISO 105-C06))",
+            "en": "Colorfastness to washing (min grade 4 (ISO 105-C06))",
+            "srcCode": "QC-CL-06",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "PILLOW-D-05",
+            "vi": "Độ bền màu ma sát khô/ướt (cấp tối thiểu 4 (ISO 105-X12))",
+            "en": "Colorfastness to rubbing dry/wet (min grade 4 (ISO 105-X12))",
+            "srcCode": "QC-CL-07",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "PILLOW-D-06",
+            "vi": "Độ bền màu mồ hôi (cấp tối thiểu 3.5 (ISO 105-E04))",
+            "en": "Colorfastness to perspiration (min grade 3.5 (ISO 105-E04))",
+            "srcCode": "QC-CL-08",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "PILLOW-D-07",
+            "vi": "Độ xù lông @2000 vòng (cấp tối thiểu 3.5 (ISO 12945-2))",
+            "en": "Pilling resistance @2000 cycles (min grade 3.5 (ISO 12945-2))",
+            "srcCode": "QC-CL-09",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "PILLOW-D-08",
+            "vi": "Tỷ trọng foam/latex (density) (dung sai ±5% (ISO 845))",
+            "en": "Foam/latex density (tolerance +/-5% (ISO 845))",
+            "srcCode": "QC-CL-10",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "PILLOW-D-09",
+            "vi": "Ruột chăn/gối: khối lượng xơ + độ phồng (dung sai ±5%, down: fill power theo report)",
+            "en": "Fiber fill weight + loft (tolerance +/-5%; down: fill power per report)",
+            "srcCode": "QC-CL-13",
+            "stages": [
+              "DEV"
+            ]
+          }
+        ],
+        "E": [
+          {
+            "code": "PILLOW-E-01",
+            "vi": "Mật độ mũi may (10-12 mũi/3cm)",
+            "en": "Stitch density (10-12 stitches/3cm)",
+            "srcCode": "QC-MAY-01"
+          },
+          {
+            "code": "PILLOW-E-02",
+            "vi": "Đường may: bỏ mũi / sụp mũi / le mí (không lỗi)",
+            "en": "Seam defects: skipped/sunk stitch, puckering (no defect)",
+            "srcCode": "QC-MAY-02"
+          },
+          {
+            "code": "PILLOW-E-03",
+            "vi": "Lại mũi đầu/cuối, chỉ thừa tối đa 5mm",
+            "en": "Backstitch at start/end, thread tail max 5mm",
+            "srcCode": "QC-MAY-03"
+          },
+          {
+            "code": "PILLOW-E-04",
+            "vi": "Dây kéo chạy mượt 20 chu kỳ, khoá giữ, răng đủ, đầu không sắc",
+            "en": "Zipper runs smooth 20 cycles, locks, teeth intact, no sharp pull-end",
+            "srcCode": "QC-MAY-05"
+          },
+          {
+            "code": "PILLOW-E-05",
+            "vi": "Lực kéo đứt đường may, seam strength (ghi nhận số liệu (ISO 13935-2))",
+            "en": "Seam strength (record value (ISO 13935-2))",
+            "srcCode": "QC-MAY-06",
+            "stages": [
+              "DEV"
+            ]
+          }
+        ],
+        "G": [
+          {
+            "code": "PILLOW-G-01",
+            "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu",
+            "en": "QCVN test report valid (<=12mo), matching fabric/color",
+            "srcCode": "QC-HS-01"
+          },
+          {
+            "code": "PILLOW-G-02",
+            "vi": "Báo cáo thành phần sợi khớp nhãn (NĐ 43/2017)",
+            "en": "Fiber-content report matches label (Decree 43/2017)",
+            "srcCode": "QC-HS-02",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "PILLOW-G-03",
+            "vi": "COA theo từng lô + số liệu trong dung sai",
+            "en": "Lot COA + figures within tolerance",
+            "srcCode": "QC-HS-03",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "PILLOW-G-04",
+            "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) còn hạn",
+            "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) valid",
+            "srcCode": "QC-HS-04",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "PILLOW-G-05",
+            "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (check trước QC-3)",
+            "en": "Final spec signed + golden sample sealed (checked before QC-3)",
+            "srcCode": "QC-HS-05",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          }
+        ]
+      }
+    },
+    "BED": {
+      "label": {
+        "en": "Bed / Bed Frame",
+        "vi": "Giường"
+      },
+      "groups": {
+        "A": [
+          {
+            "en": "Carton Dimension",
+            "vi": "Kích thước thùng carton",
+            "code": "BED-A-01"
+          },
+          {
+            "en": "Carton Construction",
+            "vi": "Kết cấu thùng carton",
+            "code": "BED-A-02"
+          },
+          {
+            "en": "Carton Condition (torn/wet/crushed/pest-mold)",
+            "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
+            "code": "BED-A-03"
+          },
+          {
+            "en": "Carton Strength",
+            "vi": "Độ chắc chắn của thùng carton",
+            "code": "BED-A-04"
+          },
+          {
+            "en": "Carton Sealing",
+            "vi": "Tình trạng đóng kín thùng",
+            "code": "BED-A-05"
+          },
+          {
+            "en": "Carton Marking",
+            "vi": "Thông tin in trên thùng",
+            "code": "BED-A-06"
+          },
+          {
+            "en": "SKU / Model",
+            "vi": "Mã SKU / Model",
+            "code": "BED-A-07"
+          },
+          {
+            "en": "Quantity per Carton",
+            "vi": "Số lượng sản phẩm trong thùng",
+            "code": "BED-A-08"
+          },
+          {
+            "en": "Barcode",
+            "vi": "Mã vạch",
+            "code": "BED-A-09"
+          },
+          {
+            "en": "Shipping Mark",
+            "vi": "Thông tin shipping mark",
+            "code": "BED-A-10"
+          }
+        ],
+        "B": [
+          {
+            "code": "BED-B-01",
+            "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
+            "en": "Packaging specification vs. spec (tolerance +/-2cm)",
+            "srcCode": "QC-BB-01"
+          },
+          {
+            "code": "BED-B-02",
+            "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
+            "en": "Label: legal content + placement + barcode (barcode scan matches SKU (Decree 43/2017, 111/2021))",
+            "srcCode": "QC-BB-02"
+          },
+          {
+            "code": "BED-B-03",
+            "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
+            "en": "Included accessories (warranty card/desiccant/cutter) (per spec)",
+            "srcCode": "QC-BB-03"
+          }
+        ],
+        "C": [
+          {
+            "code": "BED-C-01",
+            "vi": "Dài × Rộng đúng spec (dung sai ±1cm)",
+            "en": "Length x Width vs. spec (tolerance +/-1cm)",
+            "srcCode": "QC-KT-01"
+          },
+          {
+            "code": "BED-C-02",
+            "vi": "Độ vuông (chênh 2 đường chéo / chiều dài) (tối đa 1.2%)",
+            "en": "Squareness (diagonal diff / length) (max 1.2%)",
+            "srcCode": "QC-KT-03"
+          },
+          {
+            "code": "BED-C-03",
+            "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
+            "en": "Weight vs. declared (tolerance +/-4%)",
+            "srcCode": "QC-KT-06"
+          },
+          {
+            "code": "BED-C-04",
+            "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
+            "en": "Color vs. approved sample/spec (grey scale min 4 (ISO 105-A02))",
+            "srcCode": "QC-NQ-01"
+          },
+          {
+            "code": "BED-C-05",
+            "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi)",
+            "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defects)",
+            "srcCode": "QC-NQ-03"
+          },
+          {
+            "code": "BED-C-06",
+            "vi": "Mùi sản phẩm (tối đa 2/5 điểm, sau mở bao 30')",
+            "en": "Product odor (max 2/5 score, 30min after unpacking)",
+            "srcCode": "QC-NQ-04"
+          },
+          {
+            "code": "BED-C-07",
+            "vi": "Trang trí (thêu/in/tay nắm) đúng thiết kế & chắc chắn (kéo nhẹ 5N)",
+            "en": "Decoration (embroidery/print/handle) matches design & secure (5N pull test)",
+            "srcCode": "QC-NQ-06"
+          },
+          {
+            "code": "BED-C-08",
+            "vi": "Độ ồn lò xo / motor (không phát tiếng ồn bất thường)",
+            "en": "Spring/motor noise (no abnormal noise)",
+            "srcCode": "QC-CG-05"
+          },
+          {
+            "code": "BED-C-09",
+            "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng",
+            "en": "Claimed feature (cooling/massage/adjustable) works as spec",
+            "srcCode": "QC-CG-06"
+          },
+          {
+            "code": "BED-C-10",
+            "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải/màu lô) (QCVN 01:2017/BCT)",
+            "en": "[Safety] Formaldehyde content (3rd-party lab report, matching lot fabric/color) (QCVN 01:2017/BCT)",
+            "srcCode": "QC-AT-01"
+          },
+          {
+            "code": "BED-C-11",
+            "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
+            "en": "[Safety] Aromatic amines from azo dyes (max 30mg/kg (QCVN 01:2017/BCT))",
+            "srcCode": "QC-AT-02"
+          },
+          {
+            "code": "BED-C-12",
+            "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận, soát tay 100%)",
+            "en": "[Safety] Sharp objects / broken needles (zero tolerance, 100% hand check)",
+            "srcCode": "QC-AT-03"
+          },
+          {
+            "code": "BED-C-13",
+            "vi": "[An toàn] An toàn điện, sản phẩm có điện (tem hợp chuẩn hợp lệ + chạy 30' không nóng bất thường)",
+            "en": "[Safety] Electrical safety for powered products (valid compliance mark + 30min run, no abnormal heat)",
+            "srcCode": "QC-AT-04"
+          }
+        ],
+        "D": [],
+        "G": [
+          {
+            "code": "BED-G-01",
+            "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu",
+            "en": "QCVN test report valid (<=12mo), matching fabric/color",
+            "srcCode": "QC-HS-01"
+          },
+          {
+            "code": "BED-G-02",
+            "vi": "COA theo từng lô + số liệu trong dung sai",
+            "en": "Lot COA + figures within tolerance",
+            "srcCode": "QC-HS-03",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "BED-G-03",
+            "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) còn hạn",
+            "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) valid",
+            "srcCode": "QC-HS-04",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "BED-G-04",
+            "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (check trước QC-3)",
+            "en": "Final spec signed + golden sample sealed (checked before QC-3)",
+            "srcCode": "QC-HS-05",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          }
+        ],
+        "F": [
+          {
+            "en": "Screws / Bolts / Connectors complete & correct type",
+            "vi": "Vít / Bu-lông / Khớp nối đủ số lượng, đúng loại",
+            "code": "BED-F-01"
+          },
+          {
+            "en": "Headboard / footboard attachment secure",
+            "vi": "Đầu giường / chân giường gắn chắc chắn",
+            "code": "BED-F-02"
+          },
+          {
+            "en": "Casters / glides (if any) function correctly",
+            "vi": "Bánh xe / chân đế (nếu có) hoạt động đúng",
+            "code": "BED-F-03"
+          },
+          {
+            "en": "Motor(s) mounted securely (if adjustable/electric)",
+            "vi": "Motor gắn chắc chắn (nếu có chức năng điều chỉnh/điện)",
+            "code": "BED-F-04"
+          },
+          {
+            "en": "Control box / power adapter correct rating & intact (if adjustable/electric)",
+            "vi": "Hộp điều khiển / adapter nguồn đúng thông số, nguyên vẹn (nếu có chức năng điều chỉnh/điện)",
+            "code": "BED-F-05"
+          },
+          {
+            "en": "Screws / Bolts / Connectors complete & correct type (if adjustable/electric)",
+            "vi": "Vít / Bu-lông / Khớp nối đủ số lượng, đúng loại (nếu có chức năng điều chỉnh/điện)",
+            "code": "BED-F-06"
+          },
+          {
+            "en": "Backup battery / manual crank (if specified) works (if adjustable/electric)",
+            "vi": "Pin dự phòng / tay quay thủ công (nếu có yêu cầu) hoạt động (nếu có chức năng điều chỉnh/điện)",
+            "code": "BED-F-07"
+          }
+        ],
+        "H": [
+          {
+            "en": "All Parts Present per Packing List",
+            "vi": "Đủ chi tiết theo Packing List",
+            "code": "BED-H-01"
+          },
+          {
+            "en": "Assembly Instructions Clear & Complete",
+            "vi": "Hướng dẫn lắp ráp rõ ràng, đầy đủ",
+            "code": "BED-H-02"
+          },
+          {
+            "en": "Pre-drilled Holes Aligned",
+            "vi": "Lỗ khoan sẵn thẳng hàng",
+            "code": "BED-H-03"
+          },
+          {
+            "en": "Hardware Kit Complete",
+            "vi": "Bộ phụ kiện lắp ráp đầy đủ",
+            "code": "BED-H-04"
+          },
+          {
+            "en": "Trial Assembly Passes",
+            "vi": "Lắp thử đạt yêu cầu",
+            "code": "BED-H-05"
+          }
+        ],
+        "E": []
+      }
+    },
+    "ACCESSORIES": {
+      "label": {
+        "en": "Accessories",
+        "vi": "Phụ kiện"
+      },
+      "groups": {
+        "A": [
+          {
+            "en": "Carton Dimension",
+            "vi": "Kích thước thùng carton",
+            "code": "ACCESSORIES-A-01"
+          },
+          {
+            "en": "Carton Construction",
+            "vi": "Kết cấu thùng carton",
+            "code": "ACCESSORIES-A-02"
+          },
+          {
+            "en": "Carton Condition (torn/wet/crushed/pest-mold)",
+            "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
+            "code": "ACCESSORIES-A-03"
+          },
+          {
+            "en": "Carton Strength",
+            "vi": "Độ chắc chắn của thùng carton",
+            "code": "ACCESSORIES-A-04"
+          },
+          {
+            "en": "Carton Sealing",
+            "vi": "Tình trạng đóng kín thùng",
+            "code": "ACCESSORIES-A-05"
+          },
+          {
+            "en": "Carton Marking",
+            "vi": "Thông tin in trên thùng",
+            "code": "ACCESSORIES-A-06"
+          },
+          {
+            "en": "SKU / Model",
+            "vi": "Mã SKU / Model",
+            "code": "ACCESSORIES-A-07"
+          },
+          {
+            "en": "Quantity per Carton",
+            "vi": "Số lượng sản phẩm trong thùng",
+            "code": "ACCESSORIES-A-08"
+          },
+          {
+            "en": "Barcode",
+            "vi": "Mã vạch",
+            "code": "ACCESSORIES-A-09"
+          },
+          {
+            "en": "Shipping Mark",
+            "vi": "Thông tin shipping mark",
+            "code": "ACCESSORIES-A-10"
+          }
+        ],
+        "B": [
+          {
+            "code": "ACCESSORIES-B-01",
+            "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
+            "en": "Packaging specification vs. spec (tolerance +/-2cm)",
+            "srcCode": "QC-BB-01"
+          },
+          {
+            "code": "ACCESSORIES-B-02",
+            "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
+            "en": "Label: legal content + placement + barcode (barcode scan matches SKU (Decree 43/2017, 111/2021))",
+            "srcCode": "QC-BB-02"
+          },
+          {
+            "code": "ACCESSORIES-B-03",
+            "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
+            "en": "Included accessories (warranty card/desiccant/cutter) (per spec)",
+            "srcCode": "QC-BB-03"
+          }
+        ],
+        "C": [
+          {
+            "code": "ACCESSORIES-C-01",
+            "vi": "Kích thước gối/phụ kiện đúng spec (dung sai ±1.5cm)",
+            "en": "Pillow/accessory dimension vs. spec (tolerance +/-1.5cm)",
+            "srcCode": "QC-KT-05"
+          },
+          {
+            "code": "ACCESSORIES-C-02",
+            "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
+            "en": "Weight vs. declared (tolerance +/-4%)",
+            "srcCode": "QC-KT-06"
+          },
+          {
+            "code": "ACCESSORIES-C-03",
+            "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
+            "en": "Color vs. approved sample/spec (grey scale min 4 (ISO 105-A02))",
+            "srcCode": "QC-NQ-01"
+          },
+          {
+            "code": "ACCESSORIES-C-04",
+            "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi)",
+            "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defects)",
+            "srcCode": "QC-NQ-03"
+          },
+          {
+            "code": "ACCESSORIES-C-05",
+            "vi": "Mùi sản phẩm (tối đa 2/5 điểm, sau mở bao 30')",
+            "en": "Product odor (max 2/5 score, 30min after unpacking)",
+            "srcCode": "QC-NQ-04"
+          },
+          {
+            "code": "ACCESSORIES-C-06",
+            "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng",
+            "en": "Claimed feature (cooling/massage/adjustable) works as spec",
+            "srcCode": "QC-CG-06"
+          },
+          {
+            "code": "ACCESSORIES-C-07",
+            "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải/màu lô) (QCVN 01:2017/BCT)",
+            "en": "[Safety] Formaldehyde content (3rd-party lab report, matching lot fabric/color) (QCVN 01:2017/BCT)",
+            "srcCode": "QC-AT-01"
+          },
+          {
+            "code": "ACCESSORIES-C-08",
+            "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
+            "en": "[Safety] Aromatic amines from azo dyes (max 30mg/kg (QCVN 01:2017/BCT))",
+            "srcCode": "QC-AT-02"
+          },
+          {
+            "code": "ACCESSORIES-C-09",
+            "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận, soát tay 100%)",
+            "en": "[Safety] Sharp objects / broken needles (zero tolerance, 100% hand check)",
+            "srcCode": "QC-AT-03"
+          },
+          {
+            "code": "ACCESSORIES-C-10",
+            "vi": "[An toàn] An toàn điện, sản phẩm có điện (tem hợp chuẩn hợp lệ + chạy 30' không nóng bất thường)",
+            "en": "[Safety] Electrical safety for powered products (valid compliance mark + 30min run, no abnormal heat)",
+            "srcCode": "QC-AT-04"
+          }
+        ],
+        "D": [
+          {
+            "code": "ACCESSORIES-D-01",
+            "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
+            "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))",
+            "srcCode": "QC-CL-01",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "ACCESSORIES-D-02",
+            "vi": "Độ co rút sau giặt (ISO 6330, 4N 40°C, ghi nhận số liệu)",
+            "en": "Shrinkage after wash (ISO 6330, 4N 40C, record value)",
+            "srcCode": "QC-CL-05",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "ACCESSORIES-D-03",
+            "vi": "Độ bền màu giặt (cấp tối thiểu 4 (ISO 105-C06))",
+            "en": "Colorfastness to washing (min grade 4 (ISO 105-C06))",
+            "srcCode": "QC-CL-06",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "ACCESSORIES-D-04",
+            "vi": "Độ bền màu ma sát khô/ướt (cấp tối thiểu 4 (ISO 105-X12))",
+            "en": "Colorfastness to rubbing dry/wet (min grade 4 (ISO 105-X12))",
+            "srcCode": "QC-CL-07",
+            "stages": [
+              "DEV"
+            ]
+          },
+          {
+            "code": "ACCESSORIES-D-05",
+            "vi": "Ruột chăn/gối: khối lượng xơ + độ phồng (dung sai ±5%, down: fill power theo report)",
+            "en": "Fiber fill weight + loft (tolerance +/-5%; down: fill power per report)",
+            "srcCode": "QC-CL-13",
+            "stages": [
+              "DEV"
+            ]
+          }
+        ],
+        "E": [
+          {
+            "code": "ACCESSORIES-E-01",
+            "vi": "Mật độ mũi may (10-12 mũi/3cm)",
+            "en": "Stitch density (10-12 stitches/3cm)",
+            "srcCode": "QC-MAY-01"
+          },
+          {
+            "code": "ACCESSORIES-E-02",
+            "vi": "Đường may: bỏ mũi / sụp mũi / le mí (không lỗi)",
+            "en": "Seam defects: skipped/sunk stitch, puckering (no defect)",
+            "srcCode": "QC-MAY-02"
+          },
+          {
+            "code": "ACCESSORIES-E-03",
+            "vi": "Lại mũi đầu/cuối, chỉ thừa tối đa 5mm",
+            "en": "Backstitch at start/end, thread tail max 5mm",
+            "srcCode": "QC-MAY-03"
+          },
+          {
+            "code": "ACCESSORIES-E-04",
+            "vi": "Dây kéo chạy mượt 20 chu kỳ, khoá giữ, răng đủ, đầu không sắc",
+            "en": "Zipper runs smooth 20 cycles, locks, teeth intact, no sharp pull-end",
+            "srcCode": "QC-MAY-05"
+          }
+        ],
+        "G": [
+          {
+            "code": "ACCESSORIES-G-01",
+            "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu",
+            "en": "QCVN test report valid (<=12mo), matching fabric/color",
+            "srcCode": "QC-HS-01"
+          },
+          {
+            "code": "ACCESSORIES-G-02",
+            "vi": "Báo cáo thành phần sợi khớp nhãn (NĐ 43/2017)",
+            "en": "Fiber-content report matches label (Decree 43/2017)",
+            "srcCode": "QC-HS-02",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "ACCESSORIES-G-03",
+            "vi": "COA theo từng lô + số liệu trong dung sai",
+            "en": "Lot COA + figures within tolerance",
+            "srcCode": "QC-HS-03",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "ACCESSORIES-G-04",
+            "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) còn hạn",
+            "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) valid",
+            "srcCode": "QC-HS-04",
+            "stages": [
+              "FINAL",
+              "FIRST_LOT"
+            ]
+          },
+          {
+            "code": "ACCESSORIES-G-05",
+            "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (check trước QC-3)",
+            "en": "Final spec signed + golden sample sealed (checked before QC-3)",
+            "srcCode": "QC-HS-05",
+            "stages": [
+              "FIRST_LOT"
+            ]
+          }
+        ]
+      }
+    }
   }
- ],
- "categories": {
-  "MATTRESS": {
-   "label": {
-    "en": "Mattress",
-    "vi": "Đệm"
-   },
-   "groups": {
-    "A": [
-     {
-      "en": "Carton Dimension",
-      "vi": "Kích thước thùng carton",
-      "code": "MATTRESS-A-01"
-     },
-     {
-      "en": "Carton Construction",
-      "vi": "Kết cấu thùng carton",
-      "code": "MATTRESS-A-02"
-     },
-     {
-      "en": "Carton Condition (torn/wet/crushed/pest-mold)",
-      "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
-      "code": "MATTRESS-A-03"
-     },
-     {
-      "en": "Carton Strength",
-      "vi": "Độ chắc chắn của thùng carton",
-      "code": "MATTRESS-A-04"
-     },
-     {
-      "en": "Carton Sealing",
-      "vi": "Tình trạng đóng kín thùng",
-      "code": "MATTRESS-A-05"
-     },
-     {
-      "en": "Carton Marking",
-      "vi": "Thông tin in trên thùng",
-      "code": "MATTRESS-A-06"
-     },
-     {
-      "en": "SKU / Model",
-      "vi": "Mã SKU / Model",
-      "code": "MATTRESS-A-07"
-     },
-     {
-      "en": "Quantity per Carton",
-      "vi": "Số lượng sản phẩm trong thùng",
-      "code": "MATTRESS-A-08"
-     },
-     {
-      "en": "Barcode",
-      "vi": "Mã vạch",
-      "code": "MATTRESS-A-09"
-     },
-     {
-      "en": "Shipping Mark",
-      "vi": "Thông tin shipping mark",
-      "code": "MATTRESS-A-10"
-     }
-    ],
-    "B": [
-     {
-      "code": "MATTRESS-B-01",
-      "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
-      "en": "Packaging specification vs. spec (tolerance +/-2cm)"
-     },
-     {
-      "code": "MATTRESS-B-02",
-      "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (đạt, quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
-      "en": "Label: legal content + placement + barcode (pass, barcode scan matches SKU (Decree 43/2017, 111/2021))"
-     },
-     {
-      "code": "MATTRESS-B-03",
-      "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
-      "en": "Included accessories (warranty card/desiccant/cutter) (complete per spec)"
-     },
-     {
-      "code": "MATTRESS-B-04",
-      "vi": "Ký hiệu vận chuyển + hạn mở roll-pack (đạt, icon/chữ đọc rõ)",
-      "en": "Shipping marks + roll-pack open-by date (pass, icons/text legible)"
-     }
-    ],
-    "C": [
-     {
-      "code": "MATTRESS-C-01",
-      "vi": "Dài × Rộng đúng spec (dung sai ±1cm)",
-      "en": "Length x Width vs. spec (tolerance +/-1cm)"
-     },
-     {
-      "code": "MATTRESS-C-02",
-      "vi": "Độ dày nệm/topper đúng spec (dung sai ±0.8cm)",
-      "en": "Mattress/topper thickness vs. spec (tolerance +/-0.8cm)"
-     },
-     {
-      "code": "MATTRESS-C-03",
-      "vi": "Độ vuông (chênh 2 đường chéo / chiều dài) (tối đa 1.2%)",
-      "en": "Squareness (diagonal difference / length) (max 1.2%)"
-     },
-     {
-      "code": "MATTRESS-C-04",
-      "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
-      "en": "Weight vs. declared spec (tolerance +/-4%)"
-     },
-     {
-      "code": "MATTRESS-C-05",
-      "vi": "Độ phục hồi độ dày sau ép cuộn @72h (tối thiểu 93%)",
-      "en": "Thickness recovery after roll-pack @72h (min 93%)"
-     },
-     {
-      "code": "MATTRESS-C-06",
-      "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
-      "en": "Color vs. approved sample/spec (grey scale min grade 4 (ISO 105-A02))"
-     },
-     {
-      "code": "MATTRESS-C-07",
-      "vi": "Đồng màu giữa các chi tiết (mặt/viền/border) (cấp xám tối thiểu 4)",
-      "en": "Color consistency between parts (face/border/piping) (grey scale min grade 4)"
-     },
-     {
-      "code": "MATTRESS-C-08",
-      "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi (soát 100% bề mặt))",
-      "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defect (100% surface check))"
-     },
-     {
-      "code": "MATTRESS-C-09",
-      "vi": "Mùi sản phẩm (tối đa 2/5 điểm (sau mở bao 30'))",
-      "en": "Product odor (max 2/5 score (30 min after unpacking))"
-     },
-     {
-      "code": "MATTRESS-C-10",
-      "vi": "Độ phẳng bề mặt nệm (khe hở tối đa 8mm dưới thước 1m)",
-      "en": "Mattress surface flatness (max 8mm gap under 1m straightedge)"
-     },
-     {
-      "code": "MATTRESS-C-11",
-      "vi": "Trang trí (thêu/in/tay nắm) đúng thiết kế & chắc chắn (đạt, kéo nhẹ 5N không bung)",
-      "en": "Decoration (embroidery/print/handle) matches design & secure (pass, 5N light pull does not detach)"
-     },
-     {
-      "code": "MATTRESS-C-12",
-      "vi": "Độ cứng cảm nhận (1–10) so với spec (lệch tối đa 1 bậc)",
-      "en": "Perceived firmness (1-10) vs. spec (max 1-grade deviation)"
-     },
-     {
-      "code": "MATTRESS-C-13",
-      "vi": "ILD/IFD 25% so với spec (dung sai ±12% (ISO 2439/ASTM D3574))",
-      "en": "ILD/IFD 25% vs. spec (tolerance +/-12% (ISO 2439/ASTM D3574))"
-     },
-     {
-      "code": "MATTRESS-C-14",
-      "vi": "Độ phục hồi vết ấn tay trên foam (tối đa 15 giây mất vết)",
-      "en": "Foam hand-press recovery (max 15s to recover)"
-     },
-     {
-      "code": "MATTRESS-C-15",
-      "vi": "Edge support: độ lún mép khi ngồi 60s (~70kg) (tối đa 50%)",
-      "en": "Edge support: sag when sitting 60s (~70kg) (max 50% sag)"
-     },
-     {
-      "code": "MATTRESS-C-16",
-      "vi": "Độ ồn lò xo / motor (đạt, không phát tiếng ồn bất thường)",
-      "en": "Spring/motor noise (pass, no abnormal noise)"
-     },
-     {
-      "code": "MATTRESS-C-17",
-      "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng (đạt theo spec)",
-      "en": "Claimed feature (cooling/massage/adjustable) works as spec (pass per spec)"
-     },
-     {
-      "code": "MATTRESS-C-18",
-      "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải & màu lô (QCVN 01:2017/BCT))",
-      "en": "[Safety] Formaldehyde content (per 3rd-party lab report, matching fabric/color of lot (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "MATTRESS-C-19",
-      "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
-      "en": "[Safety] Azo-dye aromatic amines (max 30mg/kg (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "MATTRESS-C-20",
-      "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận (soát tay 100%))",
-      "en": "[Safety] Sharp object / broken needle residue (zero tolerance (100% hand check))"
-     },
-     {
-      "code": "MATTRESS-C-21",
-      "vi": "[An toàn] An toàn điện (sản phẩm có điện) (tem hợp chuẩn hợp lệ + chạy 30 phút không nóng bất thường)",
-      "en": "[Safety] Electrical safety (powered product) (valid safety mark + 30-min run with no abnormal heat)"
-     }
-    ],
-    "D": [
-     {
-      "code": "MATTRESS-D-01",
-      "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
-      "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))"
-     },
-     {
-      "code": "MATTRESS-D-02",
-      "vi": "Lực kéo đứt vải dệt thoi (tối thiểu 250N (ISO 13934-1))",
-      "en": "Woven fabric breaking strength (min 250N (ISO 13934-1))"
-     },
-     {
-      "code": "MATTRESS-D-03",
-      "vi": "Độ bục vải dệt kim (tối thiểu 250kPa (ISO 13938-1))",
-      "en": "Knit fabric bursting strength (min 250kPa (ISO 13938-1))"
-     },
-     {
-      "code": "MATTRESS-D-04",
-      "vi": "Lực xé rách vải (tối thiểu 20N (ISO 13937-2))",
-      "en": "Fabric tear strength (min 20N (ISO 13937-2))"
-     },
-     {
-      "code": "MATTRESS-D-05",
-      "vi": "Độ bền màu ma sát (khô/ướt) (cấp tối thiểu 4 (ISO 105-X12))",
-      "en": "Colorfastness to rubbing (dry/wet) (min grade 4 (ISO 105-X12))"
-     },
-     {
-      "code": "MATTRESS-D-06",
-      "vi": "Tỷ trọng foam/latex (density) (dung sai ±5% (ISO 845))",
-      "en": "Foam/latex density (tolerance +/-5% (ISO 845))"
-     },
-     {
-      "code": "MATTRESS-D-07",
-      "vi": "Biến dạng dư foam (compression set 50%) (tối đa 8% (ASTM D3574))",
-      "en": "Foam compression set 50% (max 8% (ASTM D3574))"
-     },
-     {
-      "code": "MATTRESS-D-08",
-      "vi": "Lò xo: số con / gauge / chiều cao / zone (ghi nhận số liệu, đối chiếu spec)",
-      "en": "Springs: count / gauge / height / zoning (record value, check vs. spec)"
-     }
-    ],
-    "E": [
-     {
-      "code": "MATTRESS-E-01",
-      "vi": "Mật độ mũi may (10–12 mũi/3cm)",
-      "en": "Stitch density (10-12 stitches/3cm)"
-     },
-     {
-      "code": "MATTRESS-E-02",
-      "vi": "Đường may: bỏ mũi / sụp mũi / le mí (đạt, không lỗi)",
-      "en": "Seam defects: skipped/sunk stitch, puckering (pass, no defect)"
-     },
-     {
-      "code": "MATTRESS-E-03",
-      "vi": "Lại mũi đầu/cuối, chỉ thừa tối đa 5mm (đạt)",
-      "en": "Back-tack at start/end, loose thread max 5mm (pass)"
-     },
-     {
-      "code": "MATTRESS-E-04",
-      "vi": "Viền / bo góc / tape edge phẳng đều (đạt, không nhăn vặn)",
-      "en": "Piping / corner / tape edge flat & even (pass, no wrinkling or twisting)"
-     },
-     {
-      "code": "MATTRESS-E-05",
-      "vi": "Dây kéo chạy mượt 20 chu kỳ, khoá giữ, răng đủ, đầu không sắc (đạt)",
-      "en": "Zipper: smooth 20-cycle run, locks, teeth complete, no sharp end (pass)"
-     },
-     {
-      "code": "MATTRESS-E-06",
-      "vi": "Lực kéo đứt đường may (seam strength) (ghi nhận số liệu (ISO 13935-2))",
-      "en": "Seam strength (breaking force) (record value (ISO 13935-2))"
-     }
-    ],
-    "G": [
-     {
-      "code": "MATTRESS-G-01",
-      "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu (đạt, đối chiếu report vs vật liệu lô)",
-      "en": "QCVN test report valid (<=12mo), matching fabric/color (pass, report matches lot material)"
-     },
-     {
-      "code": "MATTRESS-G-02",
-      "vi": "Báo cáo thành phần sợi khớp nhãn (đạt (NĐ 43/2017))",
-      "en": "Fiber-content report matches label (pass (Decree 43/2017))"
-     },
-     {
-      "code": "MATTRESS-G-03",
-      "vi": "COA theo từng lô + số liệu trong dung sai (đạt)",
-      "en": "COA per lot + values within tolerance (pass)"
-     },
-     {
-      "code": "MATTRESS-G-04",
-      "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (còn hạn, khớp claim trên tem/marketing)",
-      "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (valid, matches label/marketing claim)"
-     },
-     {
-      "code": "MATTRESS-G-05",
-      "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (đạt (check trước QC-3))",
-      "en": "Final spec signed + golden sample sealed (pass (check before QC-3))"
-     }
-    ],
-    "F": [
-     {
-      "en": "Base / frame hardware (if any) secure",
-      "vi": "Phụ kiện khung đế (nếu có) chắc chắn",
-      "code": "MATTRESS-F-01"
-     },
-     {
-      "en": "Remote control / control box works (if applicable)",
-      "vi": "Remote / hộp điều khiển hoạt động đúng (nếu có)",
-      "code": "MATTRESS-F-02"
-     }
-    ]
-   }
-  },
-  "BEDDING": {
-   "label": {
-    "en": "Bedding (Sheets/Duvet)",
-    "vi": "Chăn ga"
-   },
-   "groups": {
-    "A": [
-     {
-      "en": "Carton Dimension",
-      "vi": "Kích thước thùng carton",
-      "code": "BEDDING-A-01"
-     },
-     {
-      "en": "Carton Construction",
-      "vi": "Kết cấu thùng carton",
-      "code": "BEDDING-A-02"
-     },
-     {
-      "en": "Carton Condition (torn/wet/crushed/pest-mold)",
-      "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
-      "code": "BEDDING-A-03"
-     },
-     {
-      "en": "Carton Strength",
-      "vi": "Độ chắc chắn của thùng carton",
-      "code": "BEDDING-A-04"
-     },
-     {
-      "en": "Carton Sealing",
-      "vi": "Tình trạng đóng kín thùng",
-      "code": "BEDDING-A-05"
-     },
-     {
-      "en": "Carton Marking",
-      "vi": "Thông tin in trên thùng",
-      "code": "BEDDING-A-06"
-     },
-     {
-      "en": "SKU / Model",
-      "vi": "Mã SKU / Model",
-      "code": "BEDDING-A-07"
-     },
-     {
-      "en": "Quantity per Carton",
-      "vi": "Số lượng sản phẩm trong thùng",
-      "code": "BEDDING-A-08"
-     },
-     {
-      "en": "Barcode",
-      "vi": "Mã vạch",
-      "code": "BEDDING-A-09"
-     },
-     {
-      "en": "Shipping Mark",
-      "vi": "Thông tin shipping mark",
-      "code": "BEDDING-A-10"
-     }
-    ],
-    "B": [
-     {
-      "code": "BEDDING-B-01",
-      "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
-      "en": "Packaging specification vs. spec (tolerance +/-2cm)"
-     },
-     {
-      "code": "BEDDING-B-02",
-      "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (đạt, quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
-      "en": "Label: legal content + placement + barcode (pass, barcode scan matches SKU (Decree 43/2017, 111/2021))"
-     },
-     {
-      "code": "BEDDING-B-03",
-      "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
-      "en": "Included accessories (warranty card/desiccant/cutter) (complete per spec)"
-     }
-    ],
-    "C": [
-     {
-      "code": "BEDDING-C-01",
-      "vi": "Độ vuông (chênh 2 đường chéo / chiều dài) (tối đa 1.2%)",
-      "en": "Squareness (diagonal difference / length) (max 1.2%)"
-     },
-     {
-      "code": "BEDDING-C-02",
-      "vi": "Kích thước chăn/ga + độ ôm ga chun (dung sai ±2%, ga chun ôm phẳng 4 góc)",
-      "en": "Duvet/sheet size + fitted-sheet fit (tolerance +/-2%, fitted sheet flat at 4 corners)"
-     },
-     {
-      "code": "BEDDING-C-03",
-      "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
-      "en": "Weight vs. declared spec (tolerance +/-4%)"
-     },
-     {
-      "code": "BEDDING-C-04",
-      "vi": "Cân đối hoạ tiết / canh sọc (lệch tâm tối đa 1cm)",
-      "en": "Pattern/stripe alignment (max 1cm off-center)"
-     },
-     {
-      "code": "BEDDING-C-05",
-      "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
-      "en": "Color vs. approved sample/spec (grey scale min grade 4 (ISO 105-A02))"
-     },
-     {
-      "code": "BEDDING-C-06",
-      "vi": "Đồng màu giữa các chi tiết (mặt/viền/border) (cấp xám tối thiểu 4)",
-      "en": "Color consistency between parts (face/border/piping) (grey scale min grade 4)"
-     },
-     {
-      "code": "BEDDING-C-07",
-      "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi (soát 100% bề mặt))",
-      "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defect (100% surface check))"
-     },
-     {
-      "code": "BEDDING-C-08",
-      "vi": "Mùi sản phẩm (tối đa 2/5 điểm (sau mở bao 30'))",
-      "en": "Product odor (max 2/5 score (30 min after unpacking))"
-     },
-     {
-      "code": "BEDDING-C-09",
-      "vi": "Trang trí (thêu/in/tay nắm) đúng thiết kế & chắc chắn (đạt, kéo nhẹ 5N không bung)",
-      "en": "Decoration (embroidery/print/handle) matches design & secure (pass, 5N light pull does not detach)"
-     },
-     {
-      "code": "BEDDING-C-10",
-      "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng (đạt theo spec)",
-      "en": "Claimed feature (cooling/massage/adjustable) works as spec (pass per spec)"
-     },
-     {
-      "code": "BEDDING-C-11",
-      "vi": "Hand-feel so với golden sample / mẫu duyệt (tối thiểu 4/5 điểm)",
-      "en": "Hand-feel vs. golden sample (min 4/5 score)"
-     },
-     {
-      "code": "BEDDING-C-12",
-      "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải & màu lô (QCVN 01:2017/BCT))",
-      "en": "[Safety] Formaldehyde content (per 3rd-party lab report, matching fabric/color of lot (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "BEDDING-C-13",
-      "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
-      "en": "[Safety] Azo-dye aromatic amines (max 30mg/kg (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "BEDDING-C-14",
-      "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận (soát tay 100%))",
-      "en": "[Safety] Sharp object / broken needle residue (zero tolerance (100% hand check))"
-     }
-    ],
-    "D": [
-     {
-      "code": "BEDDING-D-01",
-      "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
-      "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))"
-     },
-     {
-      "code": "BEDDING-D-02",
-      "vi": "Lực kéo đứt vải dệt thoi (tối thiểu 250N (ISO 13934-1))",
-      "en": "Woven fabric breaking strength (min 250N (ISO 13934-1))"
-     },
-     {
-      "code": "BEDDING-D-03",
-      "vi": "Độ bục vải dệt kim (tối thiểu 250kPa (ISO 13938-1))",
-      "en": "Knit fabric bursting strength (min 250kPa (ISO 13938-1))"
-     },
-     {
-      "code": "BEDDING-D-04",
-      "vi": "Lực xé rách vải (tối thiểu 20N (ISO 13937-2))",
-      "en": "Fabric tear strength (min 20N (ISO 13937-2))"
-     },
-     {
-      "code": "BEDDING-D-05",
-      "vi": "Độ co rút + ngoại quan sau giặt 4N 40°C (ghi nhận số liệu (ISO 6330))",
-      "en": "Shrinkage + appearance after wash 4N 40°C (record value (ISO 6330))"
-     },
-     {
-      "code": "BEDDING-D-06",
-      "vi": "Độ bền màu giặt (cấp tối thiểu 4 (ISO 105-C06))",
-      "en": "Colorfastness to washing (min grade 4 (ISO 105-C06))"
-     },
-     {
-      "code": "BEDDING-D-07",
-      "vi": "Độ bền màu ma sát (khô/ướt) (cấp tối thiểu 4 (ISO 105-X12))",
-      "en": "Colorfastness to rubbing (dry/wet) (min grade 4 (ISO 105-X12))"
-     },
-     {
-      "code": "BEDDING-D-08",
-      "vi": "Độ bền màu mồ hôi (cấp tối thiểu 3.5 (ISO 105-E04))",
-      "en": "Colorfastness to perspiration (min grade 3.5 (ISO 105-E04))"
-     },
-     {
-      "code": "BEDDING-D-09",
-      "vi": "Độ xù lông @2000 vòng Martindale (cấp tối thiểu 3.5 (ISO 12945-2))",
-      "en": "Pilling resistance @2000 rubs Martindale (min grade 3.5 (ISO 12945-2))"
-     },
-     {
-      "code": "BEDDING-D-10",
-      "vi": "Ruột chăn/gối: khối lượng xơ + độ phồng (dung sai ±5%)",
-      "en": "Filling: fiber weight + loft/fill power (tolerance +/-5%)"
-     }
-    ],
-    "E": [
-     {
-      "code": "BEDDING-E-01",
-      "vi": "Mật độ mũi may (10–12 mũi/3cm)",
-      "en": "Stitch density (10-12 stitches/3cm)"
-     },
-     {
-      "code": "BEDDING-E-02",
-      "vi": "Đường may: bỏ mũi / sụp mũi / le mí (đạt, không lỗi)",
-      "en": "Seam defects: skipped/sunk stitch, puckering (pass, no defect)"
-     },
-     {
-      "code": "BEDDING-E-03",
-      "vi": "Lại mũi đầu/cuối, chỉ thừa tối đa 5mm (đạt)",
-      "en": "Back-tack at start/end, loose thread max 5mm (pass)"
-     },
-     {
-      "code": "BEDDING-E-04",
-      "vi": "Viền / bo góc / tape edge phẳng đều (đạt, không nhăn vặn)",
-      "en": "Piping / corner / tape edge flat & even (pass, no wrinkling or twisting)"
-     },
-     {
-      "code": "BEDDING-E-05",
-      "vi": "Dây kéo chạy mượt 20 chu kỳ, khoá giữ, răng đủ, đầu không sắc (đạt)",
-      "en": "Zipper: smooth 20-cycle run, locks, teeth complete, no sharp end (pass)"
-     },
-     {
-      "code": "BEDDING-E-06",
-      "vi": "Lực kéo đứt đường may (seam strength) (ghi nhận số liệu (ISO 13935-2))",
-      "en": "Seam strength (breaking force) (record value (ISO 13935-2))"
-     },
-     {
-      "code": "BEDDING-E-07",
-      "vi": "Độ hở mép đường may @60N (seam slippage) (tối đa 6mm (ISO 13936-1))",
-      "en": "Seam slippage @60N (max 6mm (ISO 13936-1))"
-     }
-    ],
-    "G": [
-     {
-      "code": "BEDDING-G-01",
-      "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu (đạt, đối chiếu report vs vật liệu lô)",
-      "en": "QCVN test report valid (<=12mo), matching fabric/color (pass, report matches lot material)"
-     },
-     {
-      "code": "BEDDING-G-02",
-      "vi": "Báo cáo thành phần sợi khớp nhãn (đạt (NĐ 43/2017))",
-      "en": "Fiber-content report matches label (pass (Decree 43/2017))"
-     },
-     {
-      "code": "BEDDING-G-03",
-      "vi": "COA theo từng lô + số liệu trong dung sai (đạt)",
-      "en": "COA per lot + values within tolerance (pass)"
-     },
-     {
-      "code": "BEDDING-G-04",
-      "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (còn hạn, khớp claim trên tem/marketing)",
-      "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (valid, matches label/marketing claim)"
-     },
-     {
-      "code": "BEDDING-G-05",
-      "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (đạt (check trước QC-3))",
-      "en": "Final spec signed + golden sample sealed (pass (check before QC-3))"
-     }
-    ]
-   }
-  },
-  "PILLOW": {
-   "label": {
-    "en": "Pillow",
-    "vi": "Gối"
-   },
-   "groups": {
-    "A": [
-     {
-      "en": "Carton Dimension",
-      "vi": "Kích thước thùng carton",
-      "code": "PILLOW-A-01"
-     },
-     {
-      "en": "Carton Construction",
-      "vi": "Kết cấu thùng carton",
-      "code": "PILLOW-A-02"
-     },
-     {
-      "en": "Carton Condition (torn/wet/crushed/pest-mold)",
-      "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
-      "code": "PILLOW-A-03"
-     },
-     {
-      "en": "Carton Strength",
-      "vi": "Độ chắc chắn của thùng carton",
-      "code": "PILLOW-A-04"
-     },
-     {
-      "en": "Carton Sealing",
-      "vi": "Tình trạng đóng kín thùng",
-      "code": "PILLOW-A-05"
-     },
-     {
-      "en": "Carton Marking",
-      "vi": "Thông tin in trên thùng",
-      "code": "PILLOW-A-06"
-     },
-     {
-      "en": "SKU / Model",
-      "vi": "Mã SKU / Model",
-      "code": "PILLOW-A-07"
-     },
-     {
-      "en": "Quantity per Carton",
-      "vi": "Số lượng sản phẩm trong thùng",
-      "code": "PILLOW-A-08"
-     },
-     {
-      "en": "Barcode",
-      "vi": "Mã vạch",
-      "code": "PILLOW-A-09"
-     },
-     {
-      "en": "Shipping Mark",
-      "vi": "Thông tin shipping mark",
-      "code": "PILLOW-A-10"
-     }
-    ],
-    "B": [
-     {
-      "code": "PILLOW-B-01",
-      "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
-      "en": "Packaging specification vs. spec (tolerance +/-2cm)"
-     },
-     {
-      "code": "PILLOW-B-02",
-      "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (đạt, quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
-      "en": "Label: legal content + placement + barcode (pass, barcode scan matches SKU (Decree 43/2017, 111/2021))"
-     },
-     {
-      "code": "PILLOW-B-03",
-      "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
-      "en": "Included accessories (warranty card/desiccant/cutter) (complete per spec)"
-     }
-    ],
-    "C": [
-     {
-      "code": "PILLOW-C-01",
-      "vi": "Kích thước gối / phụ kiện (dung sai ±1.5cm)",
-      "en": "Pillow / accessory dimensions (tolerance +/-1.5cm)"
-     },
-     {
-      "code": "PILLOW-C-02",
-      "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
-      "en": "Weight vs. declared spec (tolerance +/-4%)"
-     },
-     {
-      "code": "PILLOW-C-03",
-      "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
-      "en": "Color vs. approved sample/spec (grey scale min grade 4 (ISO 105-A02))"
-     },
-     {
-      "code": "PILLOW-C-04",
-      "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi (soát 100% bề mặt))",
-      "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defect (100% surface check))"
-     },
-     {
-      "code": "PILLOW-C-05",
-      "vi": "Mùi sản phẩm (tối đa 2/5 điểm (sau mở bao 30'))",
-      "en": "Product odor (max 2/5 score (30 min after unpacking))"
-     },
-     {
-      "code": "PILLOW-C-06",
-      "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng (đạt theo spec)",
-      "en": "Claimed feature (cooling/massage/adjustable) works as spec (pass per spec)"
-     },
-     {
-      "code": "PILLOW-C-07",
-      "vi": "Hand-feel so với golden sample / mẫu duyệt (tối thiểu 4/5 điểm)",
-      "en": "Hand-feel vs. golden sample (min 4/5 score)"
-     },
-     {
-      "code": "PILLOW-C-08",
-      "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải & màu lô (QCVN 01:2017/BCT))",
-      "en": "[Safety] Formaldehyde content (per 3rd-party lab report, matching fabric/color of lot (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "PILLOW-C-09",
-      "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
-      "en": "[Safety] Azo-dye aromatic amines (max 30mg/kg (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "PILLOW-C-10",
-      "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận (soát tay 100%))",
-      "en": "[Safety] Sharp object / broken needle residue (zero tolerance (100% hand check))"
-     }
-    ],
-    "D": [
-     {
-      "code": "PILLOW-D-01",
-      "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
-      "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))"
-     },
-     {
-      "code": "PILLOW-D-02",
-      "vi": "Độ bục vải dệt kim (tối thiểu 250kPa (ISO 13938-1))",
-      "en": "Knit fabric bursting strength (min 250kPa (ISO 13938-1))"
-     },
-     {
-      "code": "PILLOW-D-03",
-      "vi": "Độ co rút + ngoại quan sau giặt 4N 40°C (ghi nhận số liệu (ISO 6330))",
-      "en": "Shrinkage + appearance after wash 4N 40°C (record value (ISO 6330))"
-     },
-     {
-      "code": "PILLOW-D-04",
-      "vi": "Độ bền màu giặt (cấp tối thiểu 4 (ISO 105-C06))",
-      "en": "Colorfastness to washing (min grade 4 (ISO 105-C06))"
-     },
-     {
-      "code": "PILLOW-D-05",
-      "vi": "Độ bền màu ma sát (khô/ướt) (cấp tối thiểu 4 (ISO 105-X12))",
-      "en": "Colorfastness to rubbing (dry/wet) (min grade 4 (ISO 105-X12))"
-     },
-     {
-      "code": "PILLOW-D-06",
-      "vi": "Độ bền màu mồ hôi (cấp tối thiểu 3.5 (ISO 105-E04))",
-      "en": "Colorfastness to perspiration (min grade 3.5 (ISO 105-E04))"
-     },
-     {
-      "code": "PILLOW-D-07",
-      "vi": "Độ xù lông @2000 vòng Martindale (cấp tối thiểu 3.5 (ISO 12945-2))",
-      "en": "Pilling resistance @2000 rubs Martindale (min grade 3.5 (ISO 12945-2))"
-     },
-     {
-      "code": "PILLOW-D-08",
-      "vi": "Tỷ trọng foam/latex (density) (dung sai ±5% (ISO 845))",
-      "en": "Foam/latex density (tolerance +/-5% (ISO 845))"
-     },
-     {
-      "code": "PILLOW-D-09",
-      "vi": "Ruột chăn/gối: khối lượng xơ + độ phồng (dung sai ±5%)",
-      "en": "Filling: fiber weight + loft/fill power (tolerance +/-5%)"
-     }
-    ],
-    "E": [
-     {
-      "code": "PILLOW-E-01",
-      "vi": "Mật độ mũi may (10–12 mũi/3cm)",
-      "en": "Stitch density (10-12 stitches/3cm)"
-     },
-     {
-      "code": "PILLOW-E-02",
-      "vi": "Đường may: bỏ mũi / sụp mũi / le mí (đạt, không lỗi)",
-      "en": "Seam defects: skipped/sunk stitch, puckering (pass, no defect)"
-     },
-     {
-      "code": "PILLOW-E-03",
-      "vi": "Lại mũi đầu/cuối, chỉ thừa tối đa 5mm (đạt)",
-      "en": "Back-tack at start/end, loose thread max 5mm (pass)"
-     },
-     {
-      "code": "PILLOW-E-04",
-      "vi": "Dây kéo chạy mượt 20 chu kỳ, khoá giữ, răng đủ, đầu không sắc (đạt)",
-      "en": "Zipper: smooth 20-cycle run, locks, teeth complete, no sharp end (pass)"
-     },
-     {
-      "code": "PILLOW-E-05",
-      "vi": "Lực kéo đứt đường may (seam strength) (ghi nhận số liệu (ISO 13935-2))",
-      "en": "Seam strength (breaking force) (record value (ISO 13935-2))"
-     }
-    ],
-    "G": [
-     {
-      "code": "PILLOW-G-01",
-      "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu (đạt, đối chiếu report vs vật liệu lô)",
-      "en": "QCVN test report valid (<=12mo), matching fabric/color (pass, report matches lot material)"
-     },
-     {
-      "code": "PILLOW-G-02",
-      "vi": "Báo cáo thành phần sợi khớp nhãn (đạt (NĐ 43/2017))",
-      "en": "Fiber-content report matches label (pass (Decree 43/2017))"
-     },
-     {
-      "code": "PILLOW-G-03",
-      "vi": "COA theo từng lô + số liệu trong dung sai (đạt)",
-      "en": "COA per lot + values within tolerance (pass)"
-     },
-     {
-      "code": "PILLOW-G-04",
-      "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (còn hạn, khớp claim trên tem/marketing)",
-      "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (valid, matches label/marketing claim)"
-     },
-     {
-      "code": "PILLOW-G-05",
-      "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (đạt (check trước QC-3))",
-      "en": "Final spec signed + golden sample sealed (pass (check before QC-3))"
-     }
-    ]
-   }
-  },
-  "BED": {
-   "label": {
-    "en": "Bed / Bed Frame",
-    "vi": "Giường"
-   },
-   "groups": {
-    "A": [
-     {
-      "en": "Carton Dimension",
-      "vi": "Kích thước thùng carton",
-      "code": "BED-A-01"
-     },
-     {
-      "en": "Carton Construction",
-      "vi": "Kết cấu thùng carton",
-      "code": "BED-A-02"
-     },
-     {
-      "en": "Carton Condition (torn/wet/crushed/pest-mold)",
-      "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
-      "code": "BED-A-03"
-     },
-     {
-      "en": "Carton Strength",
-      "vi": "Độ chắc chắn của thùng carton",
-      "code": "BED-A-04"
-     },
-     {
-      "en": "Carton Sealing",
-      "vi": "Tình trạng đóng kín thùng",
-      "code": "BED-A-05"
-     },
-     {
-      "en": "Carton Marking",
-      "vi": "Thông tin in trên thùng",
-      "code": "BED-A-06"
-     },
-     {
-      "en": "SKU / Model",
-      "vi": "Mã SKU / Model",
-      "code": "BED-A-07"
-     },
-     {
-      "en": "Quantity per Carton",
-      "vi": "Số lượng sản phẩm trong thùng",
-      "code": "BED-A-08"
-     },
-     {
-      "en": "Barcode",
-      "vi": "Mã vạch",
-      "code": "BED-A-09"
-     },
-     {
-      "en": "Shipping Mark",
-      "vi": "Thông tin shipping mark",
-      "code": "BED-A-10"
-     }
-    ],
-    "B": [
-     {
-      "code": "BED-B-01",
-      "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
-      "en": "Packaging specification vs. spec (tolerance +/-2cm)"
-     },
-     {
-      "code": "BED-B-02",
-      "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (đạt, quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
-      "en": "Label: legal content + placement + barcode (pass, barcode scan matches SKU (Decree 43/2017, 111/2021))"
-     },
-     {
-      "code": "BED-B-03",
-      "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
-      "en": "Included accessories (warranty card/desiccant/cutter) (complete per spec)"
-     }
-    ],
-    "C": [
-     {
-      "code": "BED-C-01",
-      "vi": "Dài × Rộng đúng spec (dung sai ±1cm)",
-      "en": "Length x Width vs. spec (tolerance +/-1cm)"
-     },
-     {
-      "code": "BED-C-02",
-      "vi": "Độ vuông (chênh 2 đường chéo / chiều dài) (tối đa 1.2%)",
-      "en": "Squareness (diagonal difference / length) (max 1.2%)"
-     },
-     {
-      "code": "BED-C-03",
-      "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
-      "en": "Weight vs. declared spec (tolerance +/-4%)"
-     },
-     {
-      "code": "BED-C-04",
-      "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
-      "en": "Color vs. approved sample/spec (grey scale min grade 4 (ISO 105-A02))"
-     },
-     {
-      "code": "BED-C-05",
-      "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi (soát 100% bề mặt))",
-      "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defect (100% surface check))"
-     },
-     {
-      "code": "BED-C-06",
-      "vi": "Mùi sản phẩm (tối đa 2/5 điểm (sau mở bao 30'))",
-      "en": "Product odor (max 2/5 score (30 min after unpacking))"
-     },
-     {
-      "code": "BED-C-07",
-      "vi": "Trang trí (thêu/in/tay nắm) đúng thiết kế & chắc chắn (đạt, kéo nhẹ 5N không bung)",
-      "en": "Decoration (embroidery/print/handle) matches design & secure (pass, 5N light pull does not detach)"
-     },
-     {
-      "code": "BED-C-08",
-      "vi": "Độ ồn lò xo / motor (đạt, không phát tiếng ồn bất thường)",
-      "en": "Spring/motor noise (pass, no abnormal noise)"
-     },
-     {
-      "code": "BED-C-09",
-      "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng (đạt theo spec)",
-      "en": "Claimed feature (cooling/massage/adjustable) works as spec (pass per spec)"
-     },
-     {
-      "code": "BED-C-10",
-      "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải & màu lô (QCVN 01:2017/BCT))",
-      "en": "[Safety] Formaldehyde content (per 3rd-party lab report, matching fabric/color of lot (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "BED-C-11",
-      "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
-      "en": "[Safety] Azo-dye aromatic amines (max 30mg/kg (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "BED-C-12",
-      "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận (soát tay 100%))",
-      "en": "[Safety] Sharp object / broken needle residue (zero tolerance (100% hand check))"
-     },
-     {
-      "code": "BED-C-13",
-      "vi": "[An toàn] An toàn điện (sản phẩm có điện) (tem hợp chuẩn hợp lệ + chạy 30 phút không nóng bất thường)",
-      "en": "[Safety] Electrical safety (powered product) (valid safety mark + 30-min run with no abnormal heat)"
-     }
-    ],
-    "D": [
-     {
-      "code": "BED-D-01",
-      "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
-      "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))"
-     },
-     {
-      "code": "BED-D-02",
-      "vi": "Độ bền màu ma sát (khô/ướt) (cấp tối thiểu 4 (ISO 105-X12))",
-      "en": "Colorfastness to rubbing (dry/wet) (min grade 4 (ISO 105-X12))"
-     }
-    ],
-    "G": [
-     {
-      "code": "BED-G-01",
-      "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu (đạt, đối chiếu report vs vật liệu lô)",
-      "en": "QCVN test report valid (<=12mo), matching fabric/color (pass, report matches lot material)"
-     },
-     {
-      "code": "BED-G-02",
-      "vi": "COA theo từng lô + số liệu trong dung sai (đạt)",
-      "en": "COA per lot + values within tolerance (pass)"
-     },
-     {
-      "code": "BED-G-03",
-      "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (còn hạn, khớp claim trên tem/marketing)",
-      "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (valid, matches label/marketing claim)"
-     },
-     {
-      "code": "BED-G-04",
-      "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (đạt (check trước QC-3))",
-      "en": "Final spec signed + golden sample sealed (pass (check before QC-3))"
-     }
-    ],
-    "F": [
-     {
-      "en": "Screws / Bolts / Connectors complete & correct type",
-      "vi": "Vít / Bu-lông / Khớp nối đủ số lượng, đúng loại",
-      "code": "BED-F-01"
-     },
-     {
-      "en": "Headboard / footboard attachment secure",
-      "vi": "Đầu giường / chân giường gắn chắc chắn",
-      "code": "BED-F-02"
-     },
-     {
-      "en": "Casters / glides (if any) function correctly",
-      "vi": "Bánh xe / chân đế (nếu có) hoạt động đúng",
-      "code": "BED-F-03"
-     },
-     {
-      "en": "Motor(s) mounted securely (if adjustable/electric)",
-      "vi": "Motor gắn chắc chắn (nếu có chức năng điều chỉnh/điện)",
-      "code": "BED-F-04"
-     },
-     {
-      "en": "Control box / power adapter correct rating & intact (if adjustable/electric)",
-      "vi": "Hộp điều khiển / adapter nguồn đúng thông số, nguyên vẹn (nếu có chức năng điều chỉnh/điện)",
-      "code": "BED-F-05"
-     },
-     {
-      "en": "Screws / Bolts / Connectors complete & correct type (if adjustable/electric)",
-      "vi": "Vít / Bu-lông / Khớp nối đủ số lượng, đúng loại (nếu có chức năng điều chỉnh/điện)",
-      "code": "BED-F-06"
-     },
-     {
-      "en": "Backup battery / manual crank (if specified) works (if adjustable/electric)",
-      "vi": "Pin dự phòng / tay quay thủ công (nếu có yêu cầu) hoạt động (nếu có chức năng điều chỉnh/điện)",
-      "code": "BED-F-07"
-     }
-    ],
-    "H": [
-     {
-      "en": "All Parts Present per Packing List",
-      "vi": "Đủ chi tiết theo Packing List",
-      "code": "BED-H-01"
-     },
-     {
-      "en": "Assembly Instructions Clear & Complete",
-      "vi": "Hướng dẫn lắp ráp rõ ràng, đầy đủ",
-      "code": "BED-H-02"
-     },
-     {
-      "en": "Pre-drilled Holes Aligned",
-      "vi": "Lỗ khoan sẵn thẳng hàng",
-      "code": "BED-H-03"
-     },
-     {
-      "en": "Hardware Kit Complete",
-      "vi": "Bộ phụ kiện lắp ráp đầy đủ",
-      "code": "BED-H-04"
-     },
-     {
-      "en": "Trial Assembly Passes",
-      "vi": "Lắp thử đạt yêu cầu",
-      "code": "BED-H-05"
-     }
-    ]
-   }
-  },
-  "ACCESSORIES": {
-   "label": {
-    "en": "Accessories",
-    "vi": "Phụ kiện"
-   },
-   "groups": {
-    "A": [
-     {
-      "en": "Carton Dimension",
-      "vi": "Kích thước thùng carton",
-      "code": "ACCESSORIES-A-01"
-     },
-     {
-      "en": "Carton Construction",
-      "vi": "Kết cấu thùng carton",
-      "code": "ACCESSORIES-A-02"
-     },
-     {
-      "en": "Carton Condition (torn/wet/crushed/pest-mold)",
-      "vi": "Tình trạng thùng (rách/ướt/móp/côn trùng-ẩm mốc)",
-      "code": "ACCESSORIES-A-03"
-     },
-     {
-      "en": "Carton Strength",
-      "vi": "Độ chắc chắn của thùng carton",
-      "code": "ACCESSORIES-A-04"
-     },
-     {
-      "en": "Carton Sealing",
-      "vi": "Tình trạng đóng kín thùng",
-      "code": "ACCESSORIES-A-05"
-     },
-     {
-      "en": "Carton Marking",
-      "vi": "Thông tin in trên thùng",
-      "code": "ACCESSORIES-A-06"
-     },
-     {
-      "en": "SKU / Model",
-      "vi": "Mã SKU / Model",
-      "code": "ACCESSORIES-A-07"
-     },
-     {
-      "en": "Quantity per Carton",
-      "vi": "Số lượng sản phẩm trong thùng",
-      "code": "ACCESSORIES-A-08"
-     },
-     {
-      "en": "Barcode",
-      "vi": "Mã vạch",
-      "code": "ACCESSORIES-A-09"
-     },
-     {
-      "en": "Shipping Mark",
-      "vi": "Thông tin shipping mark",
-      "code": "ACCESSORIES-A-10"
-     }
-    ],
-    "B": [
-     {
-      "code": "ACCESSORIES-B-01",
-      "vi": "Quy cách đóng gói so với spec (dung sai ±2cm)",
-      "en": "Packaging specification vs. spec (tolerance +/-2cm)"
-     },
-     {
-      "code": "ACCESSORIES-B-02",
-      "vi": "Tem nhãn: nội dung pháp lý + vị trí + barcode (đạt, quét barcode khớp SKU (NĐ 43/2017, NĐ 111/2021))",
-      "en": "Label: legal content + placement + barcode (pass, barcode scan matches SKU (Decree 43/2017, 111/2021))"
-     },
-     {
-      "code": "ACCESSORIES-B-03",
-      "vi": "Phụ kiện kèm theo (phiếu bảo hành/gói hút ẩm/dao cắt) (đủ theo spec)",
-      "en": "Included accessories (warranty card/desiccant/cutter) (complete per spec)"
-     }
-    ],
-    "C": [
-     {
-      "code": "ACCESSORIES-C-01",
-      "vi": "Kích thước gối / phụ kiện (dung sai ±1.5cm)",
-      "en": "Pillow / accessory dimensions (tolerance +/-1.5cm)"
-     },
-     {
-      "code": "ACCESSORIES-C-02",
-      "vi": "Trọng lượng vs khai báo (dung sai ±4%)",
-      "en": "Weight vs. declared spec (tolerance +/-4%)"
-     },
-     {
-      "code": "ACCESSORIES-C-03",
-      "vi": "Màu sắc so với mẫu duyệt / spec (cấp xám tối thiểu 4 (ISO 105-A02))",
-      "en": "Color vs. approved sample/spec (grey scale min grade 4 (ISO 105-A02))"
-     },
-     {
-      "code": "ACCESSORIES-C-04",
-      "vi": "Lỗi bề mặt vải (dệt lỗi/rút sợi/thủng/bẩn/loang) (không chấp nhận lỗi (soát 100% bề mặt))",
-      "en": "Fabric surface defects (weave fault/snag/hole/stain) (zero defect (100% surface check))"
-     },
-     {
-      "code": "ACCESSORIES-C-05",
-      "vi": "Mùi sản phẩm (tối đa 2/5 điểm (sau mở bao 30'))",
-      "en": "Product odor (max 2/5 score (30 min after unpacking))"
-     },
-     {
-      "code": "ACCESSORIES-C-06",
-      "vi": "Tính năng theo claim (cooling/massage/điều chỉnh) hoạt động đúng (đạt theo spec)",
-      "en": "Claimed feature (cooling/massage/adjustable) works as spec (pass per spec)"
-     },
-     {
-      "code": "ACCESSORIES-C-07",
-      "vi": "[An toàn] Hàm lượng Formaldehyde (theo report lab bên thứ 3, đúng vải & màu lô (QCVN 01:2017/BCT))",
-      "en": "[Safety] Formaldehyde content (per 3rd-party lab report, matching fabric/color of lot (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "ACCESSORIES-C-08",
-      "vi": "[An toàn] Amin thơm chuyển hoá từ azo (tối đa 30mg/kg (QCVN 01:2017/BCT))",
-      "en": "[Safety] Azo-dye aromatic amines (max 30mg/kg (QCVN 01:2017/BCT))"
-     },
-     {
-      "code": "ACCESSORIES-C-09",
-      "vi": "[An toàn] Vật sắc nhọn / kim gãy còn sót lại (không chấp nhận (soát tay 100%))",
-      "en": "[Safety] Sharp object / broken needle residue (zero tolerance (100% hand check))"
-     }
-    ],
-    "D": [
-     {
-      "code": "ACCESSORIES-D-01",
-      "vi": "Định lượng vải (GSM) (dung sai ±5% (ISO 3801))",
-      "en": "Fabric weight (GSM) (tolerance +/-5% (ISO 3801))"
-     },
-     {
-      "code": "ACCESSORIES-D-02",
-      "vi": "Độ co rút + ngoại quan sau giặt 4N 40°C (ghi nhận số liệu (ISO 6330))",
-      "en": "Shrinkage + appearance after wash 4N 40°C (record value (ISO 6330))"
-     },
-     {
-      "code": "ACCESSORIES-D-03",
-      "vi": "Độ bền màu giặt (cấp tối thiểu 4 (ISO 105-C06))",
-      "en": "Colorfastness to washing (min grade 4 (ISO 105-C06))"
-     },
-     {
-      "code": "ACCESSORIES-D-04",
-      "vi": "Độ bền màu ma sát (khô/ướt) (cấp tối thiểu 4 (ISO 105-X12))",
-      "en": "Colorfastness to rubbing (dry/wet) (min grade 4 (ISO 105-X12))"
-     },
-     {
-      "code": "ACCESSORIES-D-05",
-      "vi": "Ruột chăn/gối: khối lượng xơ + độ phồng (dung sai ±5%)",
-      "en": "Filling: fiber weight + loft/fill power (tolerance +/-5%)"
-     }
-    ],
-    "E": [
-     {
-      "code": "ACCESSORIES-E-01",
-      "vi": "Mật độ mũi may (10–12 mũi/3cm)",
-      "en": "Stitch density (10-12 stitches/3cm)"
-     },
-     {
-      "code": "ACCESSORIES-E-02",
-      "vi": "Đường may: bỏ mũi / sụp mũi / le mí (đạt, không lỗi)",
-      "en": "Seam defects: skipped/sunk stitch, puckering (pass, no defect)"
-     },
-     {
-      "code": "ACCESSORIES-E-03",
-      "vi": "Lại mũi đầu/cuối, chỉ thừa tối đa 5mm (đạt)",
-      "en": "Back-tack at start/end, loose thread max 5mm (pass)"
-     },
-     {
-      "code": "ACCESSORIES-E-04",
-      "vi": "Dây kéo chạy mượt 20 chu kỳ, khoá giữ, răng đủ, đầu không sắc (đạt)",
-      "en": "Zipper: smooth 20-cycle run, locks, teeth complete, no sharp end (pass)"
-     }
-    ],
-    "G": [
-     {
-      "code": "ACCESSORIES-G-01",
-      "vi": "Test report QCVN còn hạn (≤12 tháng), đúng vải/màu (đạt, đối chiếu report vs vật liệu lô)",
-      "en": "QCVN test report valid (<=12mo), matching fabric/color (pass, report matches lot material)"
-     },
-     {
-      "code": "ACCESSORIES-G-02",
-      "vi": "Báo cáo thành phần sợi khớp nhãn (đạt (NĐ 43/2017))",
-      "en": "Fiber-content report matches label (pass (Decree 43/2017))"
-     },
-     {
-      "code": "ACCESSORIES-G-03",
-      "vi": "COA theo từng lô + số liệu trong dung sai (đạt)",
-      "en": "COA per lot + values within tolerance (pass)"
-     },
-     {
-      "code": "ACCESSORIES-G-04",
-      "vi": "Chứng nhận theo claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (còn hạn, khớp claim trên tem/marketing)",
-      "en": "Certification per claim (CertiPUR/Oeko-Tex/Tencel/RDS...) (valid, matches label/marketing claim)"
-     },
-     {
-      "code": "ACCESSORIES-G-05",
-      "vi": "Spec final đã ký + golden sample niêm phong đầy đủ (đạt (check trước QC-3))",
-      "en": "Final spec signed + golden sample sealed (pass (check before QC-3))"
-     }
-    ]
-   }
-  }
- }
 }</script>
 <script>
   const DATA = JSON.parse(document.getElementById('checklist-data').textContent);
@@ -3853,20 +4178,30 @@ function reportBack() {
 }
 
 /* ------------------------------ Carton model ----------------------------- */
-function buildEmptyGroups(category) {
+function buildEmptyGroups(category, qcStage) {
   const catData = CATEGORIES[category];
+  // Some checklist items (sourced from the boss's QMS standards table) only apply at
+  // specific QC stages (Development/Final/First-Lot) — e.g. lab-only material tests are
+  // dev-sample-only, and paperwork items like COA only appear from Final/First-Lot onward.
+  // An item with no `stages` array applies at every stage (unchanged legacy behaviour for
+  // carton/hardware/knock-down groups, which aren't sourced from that stage-aware table).
+  // When no stage is picked yet (qcStage falsy), show everything so the checklist isn't
+  // empty before the auditor sets it.
+  const stage = qcStage || (typeof report !== 'undefined' && report && report.qcStage) || '';
   const groups = {};
   GROUPS.forEach(g => {
     const items = catData.groups[g.id] || [];
-    groups[g.id] = items.map(it => ({
-      code: it.code, en: it.en, vi: it.vi,
-      status: null,      // 'OK' | 'NG' | 'NA'
-      severity: null,    // 'Critical' | 'Major' | 'Minor'
-      note: '',
-      photos: [],        // [{src}]
-      noNA: !!it.noNA    // checklist_data.json flag — this item can't be marked N/A (e.g. a
-                          // required photo check), so renderItemRow() hides that button for it
-    }));
+    groups[g.id] = items
+      .filter(it => !stage || !it.stages || it.stages.includes(stage))
+      .map(it => ({
+        code: it.code, en: it.en, vi: it.vi,
+        status: null,      // 'OK' | 'NG' | 'NA'
+        severity: null,    // 'Critical' | 'Major' | 'Minor'
+        note: '',
+        photos: [],        // [{src}]
+        noNA: !!it.noNA    // checklist_data.json flag — this item can't be marked N/A (e.g. a
+                            // required photo check), so renderItemRow() hides that button for it
+      }));
   });
   return groups;
 }
